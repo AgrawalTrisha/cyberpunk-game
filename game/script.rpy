@@ -16,6 +16,12 @@ label start:
 
     scene bg room
 
+    "you're part of an organization. there was a failed mission not long ago that you werent a part of."
+    "explains how the mission went down"
+    "mc must find the mole in the organization"
+    "has to be someone on the mission, high clearance only"
+    "like a bunch of descriptions of the people that i can't be bothered to type out options for cause i don't have room"
+
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
