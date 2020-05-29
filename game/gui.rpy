@@ -58,10 +58,10 @@ define gui.interface_text_color = '#ffffff'
 define gui.text_font = "fonts/Exo-Regular.ttf"
 
 ## The font used for character names.
-define gui.name_text_font = "Quantum.ttf"
+define gui.name_text_font = "fonts/Quantum.otf"
 
 ## The font used for out-of-game text.
-define gui.interface_text_font = "Quantum.ttf"
+define gui.interface_text_font = "fonts/Quantum.otf"
 
 ## The size of normal dialogue text.
 define gui.text_size = 22
