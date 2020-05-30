@@ -1140,6 +1140,82 @@ label fight_in_workshop:
     "Elio just stands there looking at the table."
 # FIGHT END
 
+label third_conversation_menu:
+    $ talkedToHacker3 = False
+    $ talkedToSpy3 = False
+    $ talkedToWeapTech3 = False
+    $ talkedToSniper3 = False
+    $ talkedToNewbie3 = False
+    $ talkedToLeader3 = False
+    $ numPeopleTalkedTo = 0
+
+    menu:
+        "You have time to talk to three people after the mission briefing."
+        "Lilea." if talkedToHacker3 == False and numPeopleTalkedTo < 3:
+            $ talkedToHacker3 = True
+            $ numPeopleTalkedTo += 1
+            jump hacker_third_conversation
+        "Emson." if talkedToSpy3 == False and numPeopleTalkedTo < 3:
+            $ talkedToSpy3 = True
+            $ numPeopleTalkedTo += 1
+            jump spy_third_conversation
+        "Erix." if talkedToWeapTech3 == False and numPeopleTalkedTo < 3:
+            $ talkedToWeapTech3 = True
+            $ numPeopleTalkedTo += 1
+            jump weaptech_third_conversation
+        "Elio." if talkedToSniper3 == False and numPeopleTalkedTo < 3:
+            $ talkedToSniper3 = True
+            $ numPeopleTalkedTo += 1
+            jump sniper_third_conversation
+        "Kona." if talkedToNewbie3 == False and numPeopleTalkedTo < 3:
+            $ talkedToNewbie3 = True
+            $ numPeopleTalkedTo += 1
+            jump newbie_third_conversation
+        "Bronx." if talkedToLeader3 == False and numPeopleTalkedTo < 3:
+            $ talkedToLeader3 = True
+            $ numPeopleTalkedTo += 1
+            jump leader_third_conversation
+        "You're out of time." if numPeopleTalkedTo == 3:
+            jump ending_selection
+
+# HACKER THIRD CONVERSATION START
+label hacker_third_conversation:
+    "You walk into Lilea's room, calling her name. You get no answer."
+    menu:
+        "On her desk, you see folders spread open and abandoned. A shelf nearby also looks disturbed, papers knocked out of a box and laying on the ground."
+        "Pick up folders on the desk":
+            "You make your way to her desk in hopes of tidying it up for her. The papers are mostly sciencey stuff you don't understand, but some look like chat logs."
+            "user403: Why didn't they get the drive\nuser983: i told you, its not my fault\nuser983: i did everything i could to make sure they got it"
+            "user403: You still failed\nuser403: How are you going to install the program now?\nuser403: That thumbdrive was supposed to be your scapegoat so you could download the program without them suspecting you"
+            "user983: relax relax im trying to convince them to go back for it\nuser403: Don't bother, I had one of my guards drop the drive on the edge of the property and it's not there now"
+            "user983: are you saying its in the base?\nuser403: That's exactly what I'm saying\nuser403: now find it and install it\nuser983: I'm going"
+            hacker "What are you doing at my desk?"
+            "You turn around and see Lilea there."
+            mc "I was just cleaning it up a little."
+            hacker "I didn't ask you to do that. Please go."
+            "You drop the papers and make your way out."
+            jump third_conversation_menu
+        "Pick up papers on the floor":
+            "You crouch down to gather the papers and see they're mostly computer things you dont understand. Some of them look to be chat logs though."
+            "user403: Why didn't they get the drive\nuser983: i told you, its not my fault\nuser983: i did everything i could to make sure they got it"
+            "user403: You still failed\nuser403: How are you going to install the program now?\nuser403: That thumbdrive was supposed to be your scapegoat so you could download the program without them suspecting you"
+            "user983: relax relax im trying to convince them to go back for it\nuser403: Don't bother, I had one of my guards drop the drive on the edge of the property and it's not there now"
+            "user983: are you saying its in the base?\nuser403: That's exactly what I'm saying\nuser403: now find it and install it\nuser983: I'm going"
+            hacker "What are you doing at my desk?"
+            "You turn around and see Lilea there."
+            mc "These papers were on the ground. I was picking them up."
+            hacker "Oh haha. Yeah, there's a lot of mess here. I print every file on my computer. No back up like paper, huh?"
+            "It seems wasteful and unnecessary to you, but then again you're not the computer guy. She walks forward to collect them for you and you shuffle the paper you were reading under some stray calculations."
+            mc "Yeah, I don't know anything about these."
+            hacker "Sometimes they don't make sense to me! Anyway, I should probably clean up my desk too. Hehe, see you!"
+            mc "See you, Lilea."
+            jump third_conversation_menu
+# HACKER THIRD CONVERSATION END
+
+# SPY THIRD CONVERSATION START
+
+# SPY THIRD CONVERSATION END
+
 
 label placeholder:
     "has not been written"
