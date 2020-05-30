@@ -684,7 +684,7 @@ label second_conversation_menu:
         "spy" if talkedToSpy2 == False and numPeopleTalkedTo < 3:
             $ talkedToSpy2 = True
             $ numPeopleTalkedTo += 1
-            jump trishaPlaceholder
+            jump spy_second_conversation
         "weapon tech" if talkedToWeapTech2 == False and numPeopleTalkedTo < 3:
             $ talkedToWeapTech2 = True
             $ numPeopleTalkedTo += 1
@@ -763,6 +763,64 @@ label i_saw_those_redbulls_under:
     "she disappears among the shelves and you can only hope she hit something soft before you hear heavy snoring"
     jump second_conversation_menu
 # HACKER SECOND CONVERSATION END
+
+# SPY SECOND CONVERSATION START
+label spy_second_conversation:
+    menu:
+        "spys room is empty his journal is on his desk"
+        "go find spy":
+            "you walk out of the wardrobe wander around, hearing a groan and thump from the kitchen as you pass it"
+            "peeking in, you find spy surrounded by salines on the table"
+            mc "why are you surrounded by crushed saltines?"
+            spy "oh! mc! you scared me, i was building a house of cards, or- er, crackers i suppose"
+            menu:
+                spy "i was bored if you couldnt tell"
+                "could i ask you about your journal?":
+                    spy "sure what about it?"
+                    mc "whats in it?"
+                    spy "just doodles, some venting that i dont feel comfortable sharing with people, that sort of thing\nmy dad used to do the same thing so i think i got it from him"
+                    jump i_dont_know_much_about_families
+                "so whered you get your journal?":
+                    "he looks surprised but answers"
+                    spy "well you know it was my dads, he left it to me when i moved away"
+                    jump i_dont_know_much_about_families
+        "open his journal":
+            "creeping in, you reach his desk"
+            "you open the journal to the first page which has written property of emson s penned on it"
+            menu:
+                "it seems like most of the front pages is writing and the back pages are drawings"
+                "look at writings":
+                    "they seem to be daily entries, he wrote more on somedays and less on others\nthe biggest entries seem to be mission days"
+                    "today we broke into a govt lab. i didnt like it very much because we had to smash a bunch of samples, i think they were dna. im not sure, but i didnt like the mess. it cheered me up to remember this was govt property. i got glass in one of my shoes though."
+                    "today was SUPER FUN!! we saw HORSES!!! like actual, not lab produced, naturally born horses!! i didnt know they came in those colors naturally too. i asked leader if we could take one back to the base, but he said no."
+                    "yesterday sniper hit me during a mission. it hurt a lot, but i dont think he realized he used so much force, because when i fell, his eyes suddenly got wide and his mouth opened all big like a dumb old fish. though that might have been because a bomb went off."
+                    "it looks like the last entry was after the failed mission"
+                    "things didnt go well today. we didnt complete the objective, and now i think we're a little stuck. we all tried really hard, but im not sure where we'll go from here. im so sick of fighting all for us to have nowhere to go to lick our wounds. i can tell leader is stressed. he has to know that the govt is getting closer to us each day, but i wonder if hes just deluding himself."
+                    "you hear a voice behind you"
+                    spy "what are you doing!"
+                    jump spy_turn_around
+                "look at drawings":
+                    "the first couple are absent scribbles, you can imagine emson scrawling in the journal during meetings with bronx droning in the back"
+                    "others look like drawings of the others, side profiles that also were made during debriefs"
+                    "some look like they were drawn by others, a cartoon of hacker seems to be self portrait"
+                    "the more you go on, the better the drawings get, eventually they turn into sceneries of places you recognize from old missions as well as maps of places the team has infiltrated"
+                    "the latest mission's building is in here"
+                    "it looks like its a typical map of the three story building, just like what leader showed diagrams of in the war room"
+                    "whats different is a map of an unrecorded floor that seems to be the basement, theres enough detail for it to suggest someones been there before, but this is spy's journal? when had he been to the basement of the target's home?"
+                    jump trishaPlaceholder
+
+label spy_turn_around:
+    jump trishaPlaceholder
+
+label i_dont_know_much_about_families:
+    mc "i dont know much about peoples families here"
+    "he shrugs"
+    spy "some people are more comfortable talking about their families than others. it doesnt hurt to ask though in my opinion"
+    mc "i suppose youre right"
+    spy "well, i gotta clean up these crackers, leader will have my head if i dont"
+    mc "bye bye"
+    jump second_conversation_menu
+# SPY SECOND CONVERSATION END
 
 label placeholder:
     "has not been written"
