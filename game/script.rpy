@@ -7,6 +7,7 @@ define e = Character("Eileen")
 define hacker = Character("Lilea")
 define mc = Character("You")
 define leader = Character("Bronx")
+define spy = Character("Emson")
 
 
 # The game starts here.
@@ -62,8 +63,9 @@ label initial_conversation_menu:
             "hacker" if talkedToHacker == False:
                 $ talkedToHacker = True
                 jump hacker_first_conversation
-            "spy":
-                jump placeholder
+            "spy" if talkedToSpy == False:
+                $ talkedToSpy = True
+                jump spy_first_conversation
             "weapons tech":
                 jump placeholder
             "sniper":
@@ -73,6 +75,7 @@ label initial_conversation_menu:
             "leader":
                 jump placeholder
 
+# HACKER INITIAL CONVERSATION START
 label hacker_first_conversation:
     menu:
         "description of the hacker's room"
@@ -86,15 +89,38 @@ label hacker_first_conversation:
                         hacker "trying to find something i dropped, thought i could find it but its kinda dark back here"
                         "thats the problem here?":
                             "hacker looks confused"
-                            jump hacker_do_you_want_help
+                    hacker_do_you_want_help
                         "do you want help?":
-                            jump hacker_do_you_want_help
+                    hacker_do_you_want_help
                 "how did you get back there?":
-                    jump placeholder
+                    jump how_did_you_get_back_there
         "snoop around":
-            jump placeholder
+            "the walls are bare, mostly taken up by shelving for various nondescript boxes, peeking in you see stacks of papers and metal scraps\nthere's a desk against the far wall\ndesk is messy, with lots of folders, wires, and drawings spread across it\nthere are at least three working monitors, with several smashed ones in the corner\nwhen you get close to the desk, the walls talk"
+            "Voice" "who's there?"
+            "you whip around"
+            menu:
+                "its dark but you can see a figure behind a shelf"
+                "who are you?":
+                    "Voice" "you sound familiar, do i know you? i'm hacker"
+                    "oh there she is"
+                    jump its_me
+                "its me":
+                    jump its_me
 
-label hacker_do_you_want_help:
+label its_me:
+    hacker "oh mc! its good youre there, i may or may not be stuck"
+    "you notice now that the figure is contorted in between the shelf and a wall"
+    menu:
+        "its hacker!"
+        "how did you get back there?":
+            jump how_did_you_get_back_there
+        "do you want help?"
+            jump do_you_want_help
+
+label how_did_you_get_back_there:
+    jump placeholder
+
+label do_you_want_help:
     mc "do you want help?"
     hacker "sure i could use some light go get my flashlight under my desk"
     "her desk is messy, with lots of folders, wires, and drawings spread across it\nthere are at least three working monitors, with several smashed ones in the corner\ntheflashlight is under the desk, along with a stray sock"
@@ -136,9 +162,6 @@ label hacker_do_you_want_help:
                 "maybe i should go talk to them":
                     jump maybe_i_should_go_talk_to_them
 
-label placeholder:
-    "has not been written"
-
 label maybe_i_should_go_talk_to_them:
     hacker "oh, if youre going to yell at them, theres no point, it wont solve anything"
     jump im_sure_newbie_has_their_own_side_to_the_story
@@ -148,4 +171,25 @@ label im_sure_newbie_has_their_own_side_to_the_story:
     hacker "right, well, now that i have my stress ball i can get back to stressing!\ni've got some schematics to look at, without that thumbdrive, we lost a lot of valuable information, gotta be double on top of everything"
     mc "well bye"
     jump initial_conversation_menu
-    
+# HACKER INITIAL CONVERSATION END
+
+# SPY INITIAL CONVERSATION START
+
+label spy_first_conversation:
+    "description of spy room"
+    "spy is there lying on fainting couch with his eyes closed, theres a journal on his desk"
+    "he hears you approach and sits up"
+    menu:
+        spy "hey! whats up?"
+        "nothing really, what're you doing?":
+            "his eyes drift to his journal and he shrugs"
+            menu:
+                spy "just decompressing, i was writing for a bit but it was nothing big"
+                "it looks pretty important, its on real paper":
+                "you got a crush? writing in your diary to them?"
+
+        "i wanted to ask how the mission went, i hear it was bad":
+        jump placeholder
+
+label placeholder:
+    "has not been written"
