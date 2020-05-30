@@ -666,8 +666,40 @@ label mission_briefing:
     "the meeting ends"
 # MISSION BRIEFING END
 
+label second_conversation_menu:
+    $ talkedToHacker2 = False
+    $ talkedToSpy2 = False
+    $ talkedToWeapTech2 = False
+    $ talkedToSniper2 = False
+    $ talkedToNewbie2 = False
+    $ talkedToLeader2 = False
+    $ numPeopleTalkedTo = 0
 
-
+    menu:
+        "hacker" if talkedToHacker2 == False:
+            $ talkedToHacker2 = True
+            $ numPeopleTalkedTo += 1
+            jump hacker_second_conversation
+        "spy" if talkedToSpy2 == False:
+            $ talkedToSpy2 = True
+            $ numPeopleTalkedTo += 1
+            jump trishaPlaceholder
+        "weapon tech" if talkedToWeapTech2 == False:
+            $ talkedToWeapTech2 = True
+            $ numPeopleTalkedTo += 1
+            jump trishaPlaceholder
+        "sniper" if talkedToSniper2 == False:
+            $ talkedToSniper2 = True
+            $ numPeopleTalkedTo += 1
+            jump trishaPlaceholder
+        "newbie" if talkedToNewbie2 == False:
+            $ talkedToNewbie2 = True
+            $ numPeopleTalkedTo += 1
+            jump trishaPlaceholder
+        "leader" if talkedToLeader2 == False:
+            $ talkedToLeader2 = True
+            $ numPeopleTalkedTo += 1
+            jump trishaPlaceholder
 
 
 label placeholder:
