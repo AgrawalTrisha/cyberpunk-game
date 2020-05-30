@@ -113,8 +113,8 @@ label hacker_first_conversation:
                     menu:
                         hacker "I'm trying to find something I dropped. Thought I could find it, but it's kinda dark back here."
                         "Thats the problem here?":
-                        show hacker confused
                             "Lilea looks at you."
+                            show hacker confused
                             jump hacker_do_you_want_help
                         "Do you want help?":
                             jump hacker_do_you_want_help
@@ -124,8 +124,8 @@ label hacker_first_conversation:
             "When you get close to the desk, the walls talk."
             "Voice" "Who's there?"
             "You whip around."
+            show hacker neutral
             menu:
-                show hacker neutral
                 "You can see a figure behind a shelf."
                 "Who are you?":
                     "Voice" "You sound familiar... do I know you? I'm Lilea!"
