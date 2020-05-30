@@ -429,103 +429,106 @@ label this_bad_boy_packs:
 
 # SNIPER INITIAL CONVERSATION START
 label sniper_first_conversation:
+    "In this room, weapons cover the wall, including all manner of guns, knives, and blunt objects. There's a table with dismantled gun parts pushed against the far wall."
+    "Ammo boxes are stacked underneath the table. Everything is so sterile, it reminds you of a twisted hospital."
+    "A man is sitting criss-cross on the floor, polishing a dismantled rifle. It's Elio."
     menu:
-        "description of the snipers room"
-        "what're you doing?":
+        "He doesn't look up when you enter."
+        "What're you doing?":
             menu:
-                sniper "i'm cleaning my rifle"
-                "how often do you do that?":
+                sniper "I'm cleaning my rifle."
+                "How often do you do that?":
                     menu:
-                        sniper "before and after every mission, and at least once a day"
-                        "wow, that's a lot":
-                            sniper "its what is necessary for the safety of myself and the people around me...or at least the people who arent on the other side of the muzzle"
-                            "there's a pause..."
-                            sniper "why did you come to me"
+                        sniper "Before and after every mission, and at least once a day."
+                        "Wow, that's a lot.":
+                            sniper "It's what is necessary for the safety of myself and the people around me... or at least the people who aren't on the other side of the muzzle."
+                            "There's a pause."
+                            sniper "Why did you come to me?"
                             jump sniper_what_did_you_do_on_the_mission
-                        "explains why you're so good at it":
-                            sniper "i have lots of experience yes"
-                            "theres a pause..."
-                            sniper "why did you come to me"
+                        "Explains why you're so good at it.":
+                            sniper "I have lots of experience, yes."
+                            "There's a pause."
+                            sniper "Why did you come to me?"
                             jump sniper_what_did_you_do_on_the_mission
-                "you look scary like that":
-                    sniper "i've been told that before"
-                    sniper "why did you come to me"
+                "You look scary like that.":
+                    sniper "I've been told that before."
+                    sniper "Why did you come to me?"
                     jump sniper_what_did_you_do_on_the_mission
-        "hi sniper":
-            "he turns around"
+        "Hi Elio.":
+            "He turns around."
             menu:
-                sniper "hello"
-                "that's a big rifle":
-                    sniper "it does its job"
-                    "there's a pause..."
-                    sniper "why did you come to me"
+                sniper "Hello."
+                "That's a big rifle.":
+                    sniper "It does its job."
+                    "There's a pause."
+                    sniper "Why did you come to me?"
                     jump sniper_what_did_you_do_on_the_mission
-                "is this a bad time?":
-                    sniper "no, i can spare time, why did you come here"
+                "Is this a bad time?":
+                    sniper "No, I can spare time. Why did you come here?"
                     jump sniper_what_did_you_do_on_the_mission
 
 label sniper_what_did_you_do_on_the_mission:
-    mc "i wanted to ask about the last mission"
-    sniper "he looks at mc"
-    mc "what did you do on the last mission?"
+    mc "I wanted to ask about Backwater."
+    "He looks at you."
+    mc "What did you do during Backwater, Elio?"
     sniper "my job was to provide cover and visual for the group"
     menu:
-        sniper "i was stationed in the hills adjacent to the target's building with a clear view of the front and back entrances"
-        "what did you see there?":
+        sniper "My job was to provide cover and visual for the group. I was stationed in the hills adjacent to Maddox's home with a clear view of the front and back entrances."
+        "What did you see there?":
             menu:
-                sniper "i saw people entering the front entrance in the beginning of the evening and not much movement from the back entrance"
-                "who was entering the front?":
-                    sniper "regular visitors, low-level government officials, and the like"
-                    mc "did you see anyone else in the front of the property?"
+                sniper "I saw people entering the front entrance in the beginning of the evening and not much movement from the back entrance."
+                "Who was entering the front?":
+                    sniper "Regular visitors, low-level government officials, and the like."
+                    mc "Did you see anyone else in the front of the property?"
                     menu:
-                        sniper "in fact yes, part of the way through the night, i saw a single guard stand outside by the outskirts of the property"
-                        "what was the guard doing?":
-                            sniper "i saw him loiter around for a while, about five minutes before staring into the woods surrounding the property\nthen he suddenly turned around and stalked back to the building"
+                        sniper "In fact, yes. Part of the way through the night, I saw a single guard stand outside by the outskirts of the property."
+                        "What was the guard doing?":
+                            sniper "I saw him loiter around for a while. It about five minutes, before staring into the woods surrounding the property. He suddenly turned around and stalked back to the building."
                             jump thats_really_weird
-                        "was he not supposed to be there?":
-                            sniper "usually the guards are in teams of two, i get the feeling he wasnt meant to be there"
-                            sniper "he stood by the woods for a short amount of time before suddenly stalking back to the building"
+                        "Was he not supposed to be there?":
+                            sniper "Usually the guards are in teams of two. I get the feeling he wasn't meant to be there."
+                            sniper "He stood by the woods for a short amount of time before suddenly stalking back to the building."
                             jump thats_really_weird
-                "what was happening at the back entrance?":
-                    sniper "it seemed that was the main entrance for catering and security\ni saw food being carried in and guards changing shifts through that door"
+                "What was happening at the back entrance?":
+                    sniper "It seemed that was the main entrance for catering and security. I saw food being carried in and guards changing shifts through that door."
+                    mc "Was there anything you saw that was different?"
                     jump was_there_anything_you_that_was_different
-        "did everything look good?":
+        "Did everything look good?":
             menu:
-                sniper "yes, there was no suspicious activity besides what was to be expected of the situation"
-                "what was expected of the sitation?":
-                    sniper "the guest list was to be made up of people wrapped up in government secrets, everyone there was complacent in their crimes"
-                    mc "so nothing stuck out to you?"
-                    sniper "i suppose somethind did now that you remind me"
+                sniper "Yes, there was no suspicious activity besides what was to be expected of the situation."
+                "What was expected of the situation?":
+                    sniper "The guest list was to be made up of people wrapped up in government secrets. Everyone there was complicit in their crimes."
+                    mc "So nothing stuck out to you?"
+                    sniper "I suppose something did, now that you remind me."
                     menu:
-                        sniper "part of the way through the night, i saw a single guard stand outside by the outskirts of the property"
-                        "what was the guard doing?":
-                            sniper "i saw him loiter around for a while, about five minutes before staring into the woods surrounding the property\nthen he suddenly turned around and stalked back to the building"
+                        sniper "Part of the way through the night, I saw a single guard stand outside by the outskirts of the property. It was by the woods."
+                        "What was the guard doing?":
+                            sniper "I saw him loiter around for a while. It about five minutes, before staring into the woods surrounding the property. He suddenly turned around and stalked back to the building."
                             jump thats_really_weird
-                        "was he not supposed to be there?":
-                            sniper "usually the guards are in teams of two, i get the feeling he wasnt meant to be there"
-                            sniper "he stood by the woods for a short amount of time before suddenly stalking back to the building"
+                        "Was he not supposed to be there?":
+                            sniper "Usually the guards are in teams of two. I get the feeling he wasn't meant to be there."
+                            sniper "He stood by the woods for a short amount of time before suddenly stalking back to the building."
                             jump thats_really_weird
-                "was there anything you that was different?":
+                "Was there anything you saw that was different?":
                     jump was_there_anything_you_that_was_different
 
 label was_there_anything_you_that_was_different:
-    mc "was there anything you that was different?"
     menu:
-        sniper "different? i suppose there was something that was unexpected, but not overtly suspicious\npart of the way through the night, i saw a single guard stand outside by the outskirts of the property"
-        "what was the guard doing?":
-            sniper "i saw him loiter around for a while, about five minutes before staring into the woods surrounding the property\nthen he suddenly turned around and stalked back to the building"
+        sniper "Different? I suppose there was something that was unexpected, but not overtly suspicious. Part of the way through the night, I saw a single guard stand outside by the outskirts of the property. It was by the woods."
+        "What was the guard doing?":
+            sniper "I saw him loiter around for a while. It about five minutes, before staring into the woods surrounding the property. He suddenly turned around and stalked back to the building."
             jump thats_really_weird
-        "was he not supposed to be there?":
-            sniper "usually the guards are in teams of two, i get the feeling he wasnt meant to be there"
-            sniper "he stood by the woods for a short amount of time before suddenly stalking back to the building"
+        "Was he not supposed to be there?":
+            sniper "Usually the guards are in teams of two. I get the feeling he wasn't meant to be there."
+            sniper "He stood by the woods for a short amount of time before suddenly stalking back to the building."
             jump thats_really_weird
 
 label thats_really_weird:
-    mc "that's really weird"
-    sniper "i dont use that word, but yes, i suppose it was weird"
-    "he looks down at the weapon on the floor in front of him"
-    sniper "i would like to continue cleaning my rifle"
-    mc "oh yeah bye"
+    mc "That's really weird."
+    sniper "I don't typically use that word, but yes. I suppose it was weird."
+    "He looks down at the weapon on the floor in front of him."
+    sniper "I would like to continue cleaning my rifle."
+    mc "Oh yeah, bye."
     jump initial_conversation_menu
 # SNIPER INITIAL CONVERSATION END
 

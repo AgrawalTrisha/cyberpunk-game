@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 108: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
-    menu:
-    ^
+File "game/script.rpy", line 444: is not terminated with a newline. (Check strings and parenthesis.)
+(Perhaps you left out a " at the end of the first line.)
+                                sniper "It's what is necessary for the safety of myself and the people around me... or at least the people who aren't on the other side of the muzzle.""
 
 Ren'Py Version: Ren'Py 7.3.0.271
-Sat May 30 03:28:39 2020
+Sat May 30 04:15:51 2020
