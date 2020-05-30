@@ -70,6 +70,7 @@ label start:
 # BRONX EXPOSITION END
 
 label initial_conversation_menu:
+    scene bg war room
     menu:
         "Who do you want to talk to?"
         "Lilea" if talkedToHacker == False:
@@ -95,6 +96,7 @@ label initial_conversation_menu:
 
 # HACKER INITIAL CONVERSATION START
 label hacker_first_conversation:
+    scene bg hacker room
     menu:
         "The room is dark, metal shelves creating a maze you can't imagine navigating. The bare walls make the clutter stand out more."
         "Cardboard boxes and stray papers line the shelves. You can see wires sticking out of random stacks."
@@ -102,14 +104,17 @@ label hacker_first_conversation:
         "Find Lilea.":
             "Listening closely, you can hear noises. It sounds like it's coming from inside the shelf maze."
             "You walk into the maze, following the mysterious noises. The source seems to be coming from a shelf pressed against a wall."
+            show hacker neutral
             menu:
                 "You don't know how, but Lilea is trapped in between the shelf and wall."
                 "What are you doing?":
+                    show hacker surprised
                     "She startles, craning her neck to look at you."
                     menu:
                         hacker "I'm trying to find something I dropped. Thought I could find it, but it's kinda dark back here."
                         "Thats the problem here?":
-                            "Lilea looks at you, confused."
+                        show hacker confused
+                            "Lilea looks at you."
                             jump hacker_do_you_want_help
                         "Do you want help?":
                             jump hacker_do_you_want_help
@@ -120,6 +125,7 @@ label hacker_first_conversation:
             "Voice" "Who's there?"
             "You whip around."
             menu:
+                show hacker neutral
                 "You can see a figure behind a shelf."
                 "Who are you?":
                     "Voice" "You sound familiar... do I know you? I'm Lilea!"
@@ -130,6 +136,7 @@ label hacker_first_conversation:
                     jump its_me
 
 label its_me:
+    show hacker happy
     hacker "Oh mc! It's good you're there. I may or may not be stuck."
     "You notice now that the figure is contorted in between the shelf and a wall."
     menu:
@@ -140,16 +147,19 @@ label its_me:
             jump hacker_do_you_want_help
 
 label how_did_you_get_back_there:
+    show hacker neutral
     hacker "Uh, I'm not sure."
     jump hacker_do_you_want_help
 
 label hacker_do_you_want_help:
+    show hacker neutral
     hacker "I could use some light. Go get my flashlight under my desk."
     "Her desk is messy, with lots of folders, wires, and drawings spread across it."
     "Belatedly, you notice there are at least three working monitors, with several smashed ones in the corner of the room."
     "You see the flashlight under the desk, along with a stray sock."
     hacker "Nice! Could you shine the light over me?"
     "You click on the flashlight, illuminating Lilea."
+    show hacker happy
     hacker "Thanks, now I see it."
     mc "What did you lose?"
     "She extracts herself from the shelf, knocking over several boxes. In the process, even more wires and papers fall out of the boxes."
@@ -157,6 +167,7 @@ label hacker_do_you_want_help:
     mc "Ah, I see."
     hacker "Yeah, it was kind of a mess."
     mc "What were you doing during Backwater, Lilea?"
+    show hacker neutral
     hacker "My job was to be the eyes basically. Bronx and I were in a van offsite."
     menu:
         hacker "He was working a drone I designed last month, and i was inside Maddox's security system."
@@ -188,6 +199,7 @@ label hacker_do_you_want_help:
                     jump maybe_i_should_go_talk_to_them
 
 label maybe_i_should_go_talk_to_them:
+    show hacker happy
     hacker "Oh, if you're going to yell at her, there's no point. It won't solve anything."
     jump im_sure_newbie_has_their_own_side_to_the_story
 
@@ -201,6 +213,8 @@ label im_sure_newbie_has_their_own_side_to_the_story:
 
 # SPY INITIAL CONVERSATION START
 label spy_first_conversation:
+    scene bg spy room
+    show spy neutral
     "The room reminds you of a thrift store. There's racks upon racks of clothes lining the walls, with additional dressers stacked in any free space."
     "A wall of mannequins wearing different length and style wigs. You don't understand the organization of the clothes, but you see a T-Rex costume hanging next to a floorlength prom dress."
     "There's a desk with a mirror propped on it tucked into the corner. Makeup and a journal cover the surface. The makeup seems to be half regular and half special effects."
