@@ -2,13 +2,30 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 20: Menu does not contain any choices.
-    menu:
-         ^
+File "game/script.rpy", line 17: invalid syntax
+    bool talkedToSpy = false
+                    ^
+    
 
-File "game/script.rpy", line 24: Menu does not contain any choices.
-    menu:
-         ^
+File "game/script.rpy", line 18: invalid syntax
+    bool talkedToWeapTech = false
+                         ^
+    
+
+File "game/script.rpy", line 19: invalid syntax
+    bool talkedToSniper = false
+                       ^
+    
+
+File "game/script.rpy", line 20: invalid syntax
+    bool talkedToNewbie = false
+                       ^
+    
+
+File "game/script.rpy", line 21: invalid syntax
+    bool talkedToLeader = false
+                       ^
+    
 
 Ren'Py Version: Ren'Py 7.3.0.271
-Fri May 29 18:51:27 2020
+Fri May 29 20:29:40 2020
