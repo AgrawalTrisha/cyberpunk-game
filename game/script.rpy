@@ -1125,7 +1125,7 @@ label fight_in_workshop:
     "You hear yelling coming from the workshop."
     "Walking in, you see Erix, Elio, Lilea, and Bronx standing around the main table."
     weaptech "The fact of the matter is we don't have the drive! There's nothing we can do about it!"
-    hacker "We could go back for it! There's nothing stopping us from running the mission again, we could just-"
+    hacker "We could go back for it! There's nothing stopping us from running the mission again, we could just—"
     sniper "It's too risky. You know we never hit the same place twice."
     leader "Elio is right. We can't risk being caught when we barely made it out the first time."
     hacker "That's an exaggeration. We were fine—"
@@ -1401,6 +1401,81 @@ label mole_finds_you:
     "Maddox" "Anyway, I'm please to announce none of you will be seeing anything but four brick walls for a long, long time."
     return
 # MOLE TIPPED OFF ENDING END
+
+# TURN IN THE MOLE ENDING START
+label time_to_choose:
+    "You walk through the hallway and as you pass by Lilea, she stops you."
+    hacker "Hey uh, Bronx said he was calling a meeting? He sounded serious. He said to meet him in the war room."
+    "Oh, thank you Lilea."
+    "She smiles and together, you both walk to the meeting."
+    "When you make it to the war room, Bronx is there. Everyone is gathered around the table again and Bronx's face says it all."
+    leader "We're out of time. What have you come up with?"
+    spy "What's Bronx talking about?"
+    hacker "Are you up to something sneaky?"
+    mc "What do you mean 'we're out of time'?"
+    leader "I've gotten word from an ally that the nearest government outpost is on the move and they're headed here. I've already set up the mobilization process, but we have no more than half an hour to clear this up."
+    leader "Now, who is the mole?"
+    "The room bursts into outrage and confusion."
+    weaptech "A mole?"
+    newbie "You're saying you think one of us is a spy?"
+    menu:
+        "Bronx is looking at you. It's time to choose."
+        "It's Lilea.":
+        "It's Emson.":
+            "His jaw drops."
+            spy "Me? You think I'm with those rats? How? Everything I do is for the rebellion!"
+            leader "You're certain it's Emson? I trust you, but we need to be 100 percent sure before we deal with this."
+            spy "Deal with me?"
+            "You look at everyones faces, trying to put the pieces together in your head, but a face is missing."
+            jump whos_missing
+        "It's Erix.":
+            weaptech "You think I'm a mole?"
+            sniper "Be careful in who you accuse of betrayal. Erix is the most honest person in this room—"
+            weaptech "No, I can speak for myself. You do not think that I'd betray you all like that. You are all my family."
+            leader "You're certain it's Erix? I trust you, but we need to be 100 percent sure before we deal with this."
+            "Elip slips his hand into Erix's."
+            "You look at everyones faces, trying to put the pieces together in your head, but a face is missing."
+            jump whos_missing
+        "It's Elio.":
+            sniper "How could I be a mole? I risk my life for this team daily. I would die for everyone here."
+            "Everyone looks uncomfortable, except for Erix. They look murderous."
+            leader "You're certain it's Elio? I trust you, but we need to be 100 percent sure before we deal with this."
+            "Elio straightens his spine, like he's preparing for an attack."
+            "You look at everyones faces, trying to put the pieces together in your head, but a face is missing."
+            jump whos_missing
+        "It's Kona.":
+            newbie "What? No, no! Is this because of Andrea? No, she''s not anything to me. I just met her once I—"
+            spy "It's alright, Kona. It's okay."
+            leader "You're certain it's Kona? I trust you, but we need to be 100 percent sure before we deal with this."
+            "Kona's face goes pale"
+            "You look at everyones faces, trying to put the pieces together in your head, but a face is missing."
+            jump whos_missing
+        "It's Bronx":
+            "His face tightens and he shoots to his feet."
+            leader "Me? You think it's me? I gave you how long and this is what you come up with?"
+            leader "I was the one who GAVE you this mission. If I were the mole, why would I let you know a mole exists?"
+            leader "Don't you have anything else?"
+            "You look at everyones faces, trying to put the pieces together in your head, but a face is missing."
+            jump whos_missing
+
+label whos_missing:"
+    Kona: "Hey, where'd Lilea go?
+    "Bronx and you make eye contact. His gaze is sharp. 'It's Lilea.'
+    "Immediately, everyone in the room takes off down the hallway to search for the missing woman. Everyone branches in different directions. You run for her room."
+    "She's not there, but one of her monitors is on. It shows a pop up: \"MESSAGE SENT\". You don't have to guess who the message was for."
+    "You dart out of the room to find someone to warn, running for the war room. When you push the door open, you're greeted by the image of Erix and Emson knocked out on the ground, their hands are pulled behind their backs with rope."
+    "Elio and Kona are being held by two men in black armor each. Both are struggling, also restrained, and near growling."
+    "Bronx is sat in a chair, face frozen in an impassive mask. His hands are free but he is every bit the prisoner the others are. Lilea stands against the far wall, frowning. Behind you, you hear a voice."
+    "Voice" "Ah, the last one. I'm glad we didn't have to look too hard."
+    "The man behind you is also wearing armor, but he doesn't have a weapon. You recognize him as Flint Maddox."
+    "Maddox" "I wanted to personally apprehend the people who invaded my home, even if the mission was planned out by Lilea and I here ourselves."
+    "Lilea looks the other way as hands grab your arms from behind you."
+    "Maddox" "Well, thank you mc, for making such a big mistake. It's because of you suspecting the wrong person that the real mole was able to alert us of your base's exact position."
+    "Maddox" "I was worried because you almost didn't get the drive I had Jege cook up for you, the First Squadron would slip away."
+    "He smiles coldly."
+    "Maddox" "Anyway, I'm please to announce none of you will be seeing anything but four brick walls for a long, long time."
+    return
+# TURN IN THE MOLE ENDING END
 
 label placeholder:
     "has not been written"
