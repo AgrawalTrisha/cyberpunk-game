@@ -200,130 +200,132 @@ label im_sure_newbie_has_their_own_side_to_the_story:
 
 # SPY INITIAL CONVERSATION START
 label spy_first_conversation:
-    "description of spy room"
-    "spy is there lying on fainting couch with his eyes closed, theres a journal on his desk"
-    "he hears you approach and sits up"
+    "The room reminds you of a thrift store. There's racks upon racks of clothes lining the walls, with additional dressers stacked in any free space."
+    "A wall of mannequins wearing different length and style wigs. You don't understand the organization of the clothes, but you see a T-Rex costume hanging next to a floorlength prom dress."
+    "There's a desk with a mirror propped on it tucked into the corner. Makeup and a journal cover the surface. The makeup seems to be half regular and half special effects."
+    "Emson is lying on a feinting couch with his eyes closed."
+    "He hears you approach and sits up."
     menu:
-        spy "hey! whats up?"
-        "nothing really, what're you doing?":
-            "his eyes drift to his journal and he shrugs"
+        spy "Hey! What's up?"
+        "Nothing really. What're you doing?":
+            "His eyes drift to his journal and he shrugs."
             menu:
-                spy "just decompressing, i was writing for a bit but it was nothing big"
-                "it looks pretty important, its on real paper":
-                    "only things that people dont want shared are written on paper, its too easy to get your personal holo hacked if youre not careful"
-                    "the org uses paper for mission plans, weapon/device designs, and other secret info"
+                spy "Just decompressing. I was writing for a bit, but it was nothing big."
+                "It looks pretty important. It's on real paper.":
+                    "Only things that people don't want shared are written on paper. It's too easy to get your personal holo hacked if youre not careful."
+                    "The Rebellion uses paper for mission plans, weapon and device designs, and other secret info."
                     menu:
-                        spy "oh yeah, its just some personal stuff, that was my dad's journal so..."
-                        "oh im sorry for prying":
-                            spy "no worries, i admit it is pretty weird for someone to be using an actual journal nowadays, this is just really sentimental for me"
+                        spy "Oh yeah, it's just some personal stuff. That was my dad's journal so..."
+                        "Oh, I'm sorry for prying.":
+                            spy "No worries! I admit it is pretty weird for someone to be using an actual journal nowadays. This is just really sentimental to me."
                             menu:
-                                spy "is there something i can do for you?"
-                                "what did you do on the mission spy?":
+                                spy "Is there something I can do for you?"
+                                "What did you do during Backwater, Emson?":
                                     jump spy_what_did_you_do_on_the_mission
-                                "the mission didn't go well did it?":
+                                "Backwater didn't go well, did it?":
                                     jump the_mission_didnt_go_well
-                        "are those drawings?":
-                            "you can see what looks like doodles and sketches on a page sticking out of the journal"
-                            spy "oh yeah they're small"
-                            mc "what of?"
+                        "Are those drawings?":
+                            "You can see what looks like doodles and sketches on a page sticking out of the journal."
+                            spy "Oh, yeah. They're small."
+                            mc "What of?"
                             menu:
-                                spy "uh people mostly sometimes places we go to"
-                                "who?":
-                                    "he gets shy"
+                                spy "Uh, people mostly. Sometimes places we go to."
+                                "Who?":
+                                    "He gets shy."
                                     menu:
-                                        spy "the team"
-                                        "how sweet, you love us":
-                                            spy "of course i do, you're my family"
+                                        spy "The team..."
+                                        "How sweet, you love us.":
+                                            spy "Of course I do. You're my family."
                                             menu:
-                                                spy "speaking of, why'd you waltz into my room like an annoying little sibling"
-                                                "what did you do on the mission spy?":
+                                                spy "Speaking of, why'd you waltz into my room like an annoying little sibling?"
+                                                "What did you do during Backwater, Emson?":
                                                     jump spy_what_did_you_do_on_the_mission
-                                                "the mission didn't go well did it?":
+                                                "Backwater didn't go well, did it?":
                                                     jump the_mission_didnt_go_well
-                                        "we better not look ugly":
-                                            spy "not more ugly than you all are usually"
+                                        "We better not look ugly.":
+                                            spy "Not more ugly than you all are usually."
                                             menu:
-                                                spy "say, as much as i love being interrogated, did you need something?"
-                                                "what did you do on the mission spy?":
+                                                spy "Say, as much as I love being interrogated, did you need something?"
+                                                "What did you do during Backwater, Emson?":
                                                     jump spy_what_did_you_do_on_the_mission
-                                                "the mission didn't go well did it?":
+                                                "Backwater didn't go well, did it?":
                                                     jump the_mission_didnt_go_well
-                                "what places?":
+                                "What places?":
                                     menu:
-                                        "mainly places we go to on missions, sometimes i draw maps to study so i don't get lost, also some of the places we see are so gorgeous itd be a crime not to"
-                                        "did you draw a map of this mission?":
+                                        "Mainly places we go to on missions. Sometimes, I draw maps to study so i don't get lost. Also some of the places we see are so gorgeous, it'd be a crime not to."
+                                        "Did you draw a map of Maddox's estate?":
                                             menu:
-                                                spy "i did, as tragic as it went"
-                                                "what did you do on the mission spy?":
+                                                spy "I did, as tragic as Backwater was."
+                                                "What did you do during Backwater, Emson?":
                                                     jump spy_what_did_you_do_on_the_mission
-                                                "the mission didn't go well did it?":
+                                                "Backwater didn't go well, did it?":
                                                     jump the_mission_didnt_go_well
-                                        "i bet they're really good, you have an eye for gorgeous things":
-                                            "well of course, beauty knows beauty"
+                                        "I bet they're really good. You have an eye for gorgeous things.":
+                                            "Well of course. Beauty knows beauty."
                                             menu:
-                                                spy "oh, did you need something, you did come in here for smth right?"
-                                                "what did you do on the mission spy?":
+                                                spy "Oh, did you need something? You did come in here for something right?"
+                                                "What did you do during Backwater, Emson?":
                                                     jump spy_what_did_you_do_on_the_mission
-                                                "the mission didn't go well did it?":
+                                                "Backwater didn't go well, did it?":
                                                     jump the_mission_didnt_go_well
-                "you got a crush? writing in your diary to them?":
-                    spy "what! no! theres no one!"
-                    mc "riiiiight"
-                    "he blushes"
+                "You got a crush? Writing in your diary to them?":
+                    spy "What! No! There's no one."
+                    mc "Riiiiight."
+                    "He blushes."
                     menu:
-                        spy "i mean it, but never mind, what did you come to me for?"
-                        "what did you do on the mission spy?":
+                        spy "I mean it, but never mind. What did you come to me for?"
+                        "What did you do during Backwater, Emson?":
                             jump spy_what_did_you_do_on_the_mission
-                        "the mission didn't go well did it?":
+                        "Backwater didn't go well, did it?":
                             jump the_mission_didnt_go_well
-        "i wanted to ask how the mission went, i hear it was bad":
-            spy "yeah it wasnt as smooth as it couldve been"
-            mc "what did you do on the mission spy?"
+        "I wanted to ask how Backwater went. I heard it was bad.":
+            spy "Yeah. It wasn't as smooth as it could've been."
+            mc "What did you do during Backwater, Emson?"
             jump spy_what_did_you_do_on_the_mission
 
 label spy_what_did_you_do_on_the_mission:
-    spy "i was the distraction, its kinda my thing ya know"
-    spy "i was supposed to keep the target's lapdog out of their office"
+    spy "I was the distraction. It's kinda my thing, ya know?"
+    spy "I was supposed to keep Maddox's lapdog out of their office."
     jump lapdog
 
 label lapdog:
-    mc "lapdog?"
-    spy "yeah, their resident tech guy, hard to call him a hacker when he doesnt hold a candle to ours heh"
-    mc "did you get to them?"
-    spy "yeah i did"
+    mc "Lapdog?"
+    spy "Yeah, their resident tech guy, Jege. Hard to call him a hacker when he doesn't hold a candle to ours, heh."
+    mc "Did you get to them?"
+    spy "Yeah, I did."
     menu:
-        spy "we were chatting for a bit, when he suddenly got real agitated and ran away, i guess he figured out something was up, probably was wearing an earpiece"
-        "did he say anything?":
+        spy "We were chatting for a bit when he suddenly got real agitated and ran away. I guess he figured out something was up. Probably was wearing an earpiece."
+        "Did he say anything?":
             menu:
-                spy "nothing that made sense, only: \"no, get out of there, you were supposed to stay out of there\""
-                "thats weird":
-                    spy "yup, but what do you expect from rats? good thing leader gave the order to abort the mission soon afterward"
+                spy "Nothing that made sense. Only 'no, get out of there! You were supposed to stay out of there.'"
+                "That's weird.":
+                    spy "Yup, but what do you expect from rats? Good thing Bronx gave the order to abort the mission soon afterward."
                     jump you_really_hate_the_government
-                "do you know what he was talking about?":
-                    spy "no, not at all, government rats rarely make sense"
+                "Do you know what he was talking about?":
+                    spy "No, not at all. Government rats rarely make sense."
                     jump you_really_hate_the_government
-        "what did you do afterwards?":
-            spy "i was going to radio in to leader but then someone else came to talk to me"
+        "What did you do afterwards?":
+            spy "I was going to radio in to Bronx, but then someone else came to talk to me."
             mc "who came to talk to you?"
-            spy "ah, just some government jerk, low-level riff-raff is all, didn't say anything useful, leader gave the order for us to abort like ten minutes after that anyway"
+            spy "Ah, just some government jerk. Low-level riff-raff is all. Didn't say anything useful. Bronx gave the order for us to abort like ten minutes after that anyway."
             jump you_really_hate_the_government
 
 label you_really_hate_the_government:
-    mc "you really hate the government dont you?"
-    "he gets stony"
-    spy "they're not my favorite people no"
-    spy "hey, i love talking, thats why im so good at my job, but i think i need some me time, the mission kind of tired me out"
-    mc "oh see you then"
+    mc "You really hate the government don't you?"
+    "His face gets stony."
+    spy "They're not my favorite people, no."
+    spy "Hey, I love talking—that's why I'm so good at my job—but I think I need some me time. Backwater kind of tired me out."
+    mc "Oh, see you then."
     jump initial_conversation_menu
 
 label the_mission_didnt_go_well:
-    spy "no, no it didn't"
-    spy "i mean, it could've been a lot worse, but it could've been a lot worse"
-    mc "how could it have been worse"
-    spy "we didn't lose anyone this time"
-    "you look at spy awkwardly"
-    spy "sorry, that was grim, hard not to be in this line of work sometimes"
-    spy "i had to deal with the target's lapdog and i get grouchy when i have to socialize with rats"
+    spy "No. No, it didn't."
+    spy "I mean, it could've been a lot worse, but it could've been a lot better."
+    mc "How could it have been worse?"
+    spy "We didn't lose anyone this time."
+    "You look at Emson awkwardly."
+    spy "Sorry, that was grim. Hard not to be in this line of work sometimes."
+    spy "I had to deal with Maddox's lapdog and I get grouchy when I have to socialize with rats."
     jump lapdog
 # SPY INITIAL CONVERSATION END
 
