@@ -1147,6 +1147,7 @@ label third_conversation_menu:
     $ talkedToSniper3 = False
     $ talkedToNewbie3 = False
     $ talkedToLeader3 = False
+    $ hackerTippedOff = False
     $ numPeopleTalkedTo = 0
 
     menu:
@@ -1175,8 +1176,10 @@ label third_conversation_menu:
             $ talkedToLeader3 = True
             $ numPeopleTalkedTo += 1
             jump leader_third_conversation
-        "You're out of time." if numPeopleTalkedTo == 3:
-            jump ending_selection
+        "You're out of time." if numPeopleTalkedTo == 3 and hackerTippedOff:
+            jump mole_finds_you
+        "You're out of time." if numPeopleTalkedTo == 3 and hackerTippedOff == False:
+            jump time_to_choose
 
 # HACKER THIRD CONVERSATION START
 label hacker_third_conversation:
@@ -1349,8 +1352,55 @@ label so_you_just_want_a_friend:
 # NEWBIE THIRD CONVERSATION END
 
 # LEADER THIRD CONVERSATION START
+label leader_third_conversation:
+    "You find Bronx in the hallway outside the war room. He seems frozen at the door."
+    mc "Bronx?"
+    menu:
+        leader "I need to tell you something mc."
+        "Is everything okay?":
+            jump i_have_the_thumbdrive
+        "Why are you standing here alone?":
+            jump i_have_the_thumbdrive
 
+label i_have_the_thumbdrive:
+    leader "I have the thumbdrive."
+    mc "You do? Why didn't you tell us?"
+    leader "It seemed... off. I found it in the woods."
+    mc "The woods?"
+    leader "Yes, just inside the property. I saw a guard drop something with my drone during the mission, and it seemed so off I had to investigate."
+    leader "I went to where he was standing right outside the woods and there it was. The drive was just lying there in the dirt. I didn't tell anyone because it didn't seem right... almost like they wanted us to find it."
+    leader "I thought it might be a trap."
+    mc "You think the mole set it up."
+    leader "Think about it. One of the few missions we don't get info on, suddenly the objective gets left for us as we retreat? It's too suspicious."
+    mc "Why don't you look at the drive?"
+    leader "What if it has a tracking software on it? If this is from the enemy, we can't trust it."
+    leader "I need time to think. Keep investigating."
+    jump third_conversation_menu
 # LEADER THIRD CONVERSATION END
+
+# MOLE TIPPED OFF ENDING START
+label mole_finds_you:
+    "You walk through the hallway and as you pass by Lilea, she stops you."
+    hacker "Hey uh, Bronx said he was calling a meeting? He sounded serious. He said to meet him in Erix's workshop."
+    mc "Oh, gotcha."
+    "You walk to the workshop together, but when you enter, the room is empty. You turn around to ask her where everyone is and see a flash of green as she lunges at you."
+    "Your vision goes black."
+    "..."
+    "Consciousness comes back slowly and the first thing you notice is the cold ground."
+    "You're lying on the war room floor next to Erix and Emson. They're out cold and have their hands restrained behind them like you."
+    "Above you, Elio and Kona are being held by two men in black armor each. Both are struggling, also restrained, and near growling."
+    "Bronx is sat in a chair, face frozen in an impassive mask. His hands are free but he is every bit the prisoner the others are. Lilea stands against the far wall, frowning."
+    "From the doorway, you hear a voice."
+    "Voice" "Ah, you woke up earlier than I thought you would."
+    "The man behind you is also wearing armor, but he doesn't have a weapon. You recognize him as Flint Maddox."
+    "Maddox" "I wanted to personally apprehend the people who invaded my home, even if the mission was planned out by Lilea and I here ourselves."
+    "Lilea looks the other direction."
+    "Maddox" "She contacted me after she realized you were onto her and I couldn't leave my little spy to get caught now could I?"
+    "Maddox" "We were originally going to wait before we raided your base, but plans change I suppose. I was worried because you almost didn't get the drive I had Jege cook up for you, the First Squadron would slip away."
+    "He smiles coldly."
+    "Maddox" "Anyway, I'm please to announce none of you will be seeing anything but four brick walls for a long, long time."
+    return
+# MOLE TIPPED OFF ENDING END
 
 label placeholder:
     "has not been written"
