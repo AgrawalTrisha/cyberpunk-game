@@ -741,7 +741,7 @@ label second_conversation_menu:
         "Elio." if talkedToSniper2 == False and numPeopleTalkedTo < 3:
             $ talkedToSniper2 = True
             $ numPeopleTalkedTo += 1
-            jump trishaPlaceholder
+            jump sniper_second_conversation
         "Kona." if talkedToNewbie2 == False and numPeopleTalkedTo < 3:
             $ talkedToNewbie2 = True
             $ numPeopleTalkedTo += 1
@@ -904,7 +904,7 @@ label i_dont_know_much_about_families:
     jump second_conversation_menu
 # SPY SECOND CONVERSATION END
 
-# WEAPON TECH SECOND CONVERSATION
+# WEAPON TECH SECOND CONVERSATION START
 label weaptech_second_conversation:
     "You find both Erix and Elio in the workshop, but they're on separate sides of the room. Erix smiles at you and calls you over."
     weaptech "Hey! Come look at this!"
@@ -955,7 +955,58 @@ label reminds_me_of_my_own_designs:
             mc "Maybe next time."
             weaptech "Oh, shame. Well, see you!"
             jump second_conversation_menu
-# WEAPON TECH SECOND CONVERSATION
+# WEAPON TECH SECOND CONVERSATION END
+
+# SNIPER SECOND CONVERSATION START
+label sniper_second_conversation:
+    menu:
+        "You find both Erix and Elio in the workshop, but they're on separate sides of the room. Elio is quietly cleaning a pistol. You recognize it as Ace."
+        "I didn't know you could use a handgun.":
+            menu:
+                sniper "I can use all manner of firearms."
+                "What about knives?":
+                    sniper "Those as well. In order to most efficiently protect the team, I can use any object as a weapon."
+                    mc "Even your hands?"
+                    sniper "My hands were the first thing I trained."
+                    jump wow_whered_you_learn
+                "What's your favorite gun?":
+                    sniper "Why would I have a favorite gun?"
+                    mc "Well, you use them so often."
+                    sniper "Does that mean you have a favorite fork?"
+                    mc "Noted."
+                    "He blinks, then sighs."
+                    sniper "I have been using guns for a long time. I do not form bonds with them like Erix does. I've been using them for...I believe it would be twelve years now."
+                    jump wow_whered_you_learn
+        "Still cleaning your guns, huh?":
+            sniper "Yes, I am."
+            mc "What's your favorite gun?"
+            sniper "Why would I have a favorite gun?"
+            mc "Well, you use them so often."
+            sniper "Does that mean you have a favorite fork?"
+            mc "Noted."
+            "He blinks, then sighs."
+            sniper "I have been using guns for a long time. I do not form bonds with them like Erix does. I've been using them for...I believe it would be twelve years now."
+            jump wow_whered_you_learn
+label wow_whered_you_learn:
+    mc "Wow. Where'd you learn?"
+    sniper "A government mandated training school."
+    mc "You worked for the government?"
+    sniper "Yes, but I soon realized their true goals. They only value the destination, not the ones who get them there."
+    sniper "I felt their values were damaging to individual character."
+    mc "You seem to have a pretty strong character."
+    sniper "I didn't always, and I'm not sure I do even now."
+    "He looks down at the gun part in his hand."
+    sniper "I owe a lot to Erix for all she's done to make me strong, but some days I feel weak."
+    mc "How so?"
+    sniper "I cannot forget my time with the government completely."
+    "He looks uncomfortable."
+    sniper "Forgive me. I know talking about it disturbs others."
+    mc "You can talk. I don't mind."
+    sniper "I'm afraid it disturbs me as well. I want to continue cleaning."
+    mc "Oh, alright."
+    "He turns his back to you."
+    jump second_conversation_menu
+# SNIPER SECOND CONVERSATION END
 
 label placeholder:
     "has not been written"
