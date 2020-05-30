@@ -2,13 +2,53 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 525: expected statement.
-    "want to talk about it?":
-                            ^
+File "game/script.rpy", line 88: expected ':' not found.
+    label hacker_first_conversationewbie
+                                        ^
 
-File "game/script.rpy", line 529: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
-    "they laugh but it sounds bitter"
-    ^
+File "game/script.rpy", line 186: expected ':' not found.
+    label spy_first_conversationewbie
+                                     ^
+
+File "game/script.rpy", line 268: expected ':' not found.
+    label spy_what_did_you_do_on_the_missionewbie
+                                                 ^
+
+File "game/script.rpy", line 303: expected ':' not found.
+    label the_mission_didnt_go_welleader
+                                        ^
+
+File "game/script.rpy", line 315: expected ':' not found.
+    label weaptech_first_conversationewbie
+                                          ^
+
+File "game/script.rpy", line 359: expected ':' not found.
+    label weaptech_what_did_you_do_on_the_missionewbie
+                                                      ^
+
+File "game/script.rpy", line 386: expected ':' not found.
+    label they_stand_and_grab_a_pistoleader
+                                           ^
+
+File "game/script.rpy", line 408: expected ':' not found.
+    label sniper_first_conversationewbie
+                                        ^
+
+File "game/script.rpy", line 444: expected ':' not found.
+    label sniper_what_did_you_do_on_the_missionewbie
+                                                    ^
+
+File "game/script.rpy", line 510: expected ':' not found.
+    label newbie_first_conversationewbie
+                                        ^
+
+File "game/script.rpy", line 539: expected ':' not found.
+    label newbie_what_happened_on_the_missionewbie
+                                                  ^
+
+File "game/script.rpy", line 587: expected ':' not found.
+    label leader_first_conversationewbie
+                                        ^
 
 Ren'Py Version: Ren'Py 7.3.0.271
-Sat May 30 00:07:42 2020
+Sat May 30 01:06:05 2020

@@ -24,10 +24,6 @@ label start:
     $ talkedToNewbie = False
     $ talkedToLeader = False
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
-
     scene bg room
 
     show leader neutral
@@ -43,20 +39,6 @@ label start:
     mc "who's high clearance"
     leader "character descriptions"
     jump initial_conversation_menu
-
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
-
-    show eileen happy
-
-    # These display lines of dialogue.
-
-    e "You've created a new Ren'Py game."
-
-    e "Once you add a story, pictures, and music, you can release it to the world!"
-
-    # This ends the game.
 
     return
 
@@ -124,12 +106,12 @@ label its_me:
         "how did you get back there?":
             jump how_did_you_get_back_there
         "do you want help?":
-            jump do_you_want_help
+            jump hacker_do_you_want_help
 
 label how_did_you_get_back_there:
     jump placeholder
 
-label do_you_want_help:
+label hacker_do_you_want_help:
     mc "do you want help?"
     hacker "sure i could use some light go get my flashlight under my desk"
     "her desk is messy, with lots of folders, wires, and drawings spread across it\nthere are at least three working monitors, with several smashed ones in the corner\ntheflashlight is under the desk, along with a stray sock"
@@ -642,8 +624,51 @@ label would_you_say_everyone_did_their_jobs:
 # LEADER INITIAL CONVERSATION END
 
 # MISSION BRIEFING START
-
+label mission_briefing:
+    "in the war room, everyone is there"
+    "leader is talking abt what they could do from here"
+    leader "did you get any info that we can use spy?"
+    spy "nothing we didnt already know"
+    leader "hacker?"
+    hacker "we were able to get a better idea of who is involved with govt affairs, it was more public figures than we thought"
+    weaptech "you mean like celebrities?"
+    hacker "yeah, we knew about some, but there were so many more guests than we expected"
+    sniper "you are referring to the target's daughter"
+    hacker "well, i suppose, she wasnt supposed to be at her fathers house at all this month"
+    leader "speaking of, ill take this time to remind the team that we have assigned jobs for a reason, i give you tasks that fit you, so stick to them"
+    "theres an awkward pause"
+    newbie "i was just trying to help"
+    leader "i know that and everyone here appreciates that-"
+    sniper "i did not appreciate it"
+    "weap tech hits sniper"
+    hacker "yeah, he has a point, youre new newbie, but that doesnt mean we dont have a system to things"
+    spy "well hey now everybody, newbie was only trying to help, we've all made mistakes on missions before"
+    sniper "i do not"
+    "weap tech hits him again"
+    leader "that's true, but no one has deliberately disobeyed directions before, it wont happen again"
+    newbie "youre right, it wont, im sorry for messing up like that"
+    hacker "whyd you even make conversation with her for so long? you could have made up an excuse and left or something"
+    newbie "um"
+    weaptech "yeah, it seemed like she wanted to speak with you for some reason"
+    spy "i hope youre not suggesting something"
+    weaptech "no no! just saying"
+    sniper "do you know the daughter newbie?"
+    newbie "no! of course not, ive never met her before"
+    spy "newbie is not friends with anyone from the government, right newbie?"
+    newbie "no, no im not"
+    spy "so there you go, id appreciate it if you would stop throwing accusations like that of my friend"
+    weaptech "newbie is our friend too spy"
+    leader "and no one is accusing anyone of anything"
+    "leader avoids your gaze when he says that"
+    leader "this meeting was to establish the groundwork for where we go next"
+    leader "i was banking on whatever we gleaned from the last mission to provide direction for the next, but because we didnt learn much, we'll have to find something else to do"
+    leader "i'll call another meeting when i have a plan, get some rest for now"
+    "the meeting ends"
 # MISSION BRIEFING END
+
+
+
+
 
 label placeholder:
     "has not been written"
