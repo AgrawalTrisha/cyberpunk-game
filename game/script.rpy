@@ -1282,6 +1282,44 @@ label you_think_they_were_stolen:
     jump third_conversation_menu
 # WEAPONS TECH THIRD CONVERSATION END
 
+# SNIPER THIRD CONVERSATION START
+label sniper_third_conversation:
+    "Elio stands at a table in the workshop silently. Erix is by themself, working on something you can't see."
+    "When you approach him, Elio's head snaps up."
+    sniper "I want to be honest."
+    mc "Are you being dishonest?"
+    "He considers the question."
+    menu:
+        sniper "I believe I'm lying by omission. I would like to share my past with you."
+        "I'm listening.":
+            jump sniper_tells_you_his_past
+        "You don't have to.":
+            "He shakes his head."
+            sniper "No, this is a part of me I would like you to know."
+            mc "Alright."
+            jump sniper_tells_you_his_past
+
+label sniper_tells_you_his_past:
+    sniper "Before I came to the rebellion, I was part of a steet gang. They were called the Rattlesnakes. It was there that I met Erix."
+    mc "Erix?"
+    sniper "Yes, but that's not my story to tell."
+    mc "Why were you in a gang?"
+    sniper "Working for the government was not kind. They taught me how to be a weapon."
+    mc "A weapon?"
+    sniper "Yes, and it was the gang who taught me how to be a person."
+    sniper "I'm glad I left though, because it was this team who taught me how to be a family."
+    mc "Thank you for telling me."
+    sniper "Don't thank me. It was a selfish action. The guilt was making me feel bad and I knew telling you the truth would stop the feeling."
+    mc "It's okay, buddy."
+    sniper "Buddy? I don't like that name."
+    "He pauses and checks his watch."
+    sniper "This is usually the time I clean my scopes. I can't be late."
+    mc "Bye?"
+    "He doesn't respond."
+    jump third_conversation_menu
+
+# SNIPER THIRD CONVERSATION END
+
 label placeholder:
     "has not been written"
 
