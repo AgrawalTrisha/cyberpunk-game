@@ -61,25 +61,28 @@ label start:
     return
 
 label initial_conversation_menu:
-        menu:
-            "who do you want to talk to?"
-            "hacker" if talkedToHacker == False:
-                $ talkedToHacker = True
-                jump hacker_first_conversation
-            "spy" if talkedToSpy == False:
-                $ talkedToSpy = True
-                jump spy_first_conversation
-            "weapons tech" if talkedToWeapTech == False:
-                $ talkedToWeapTech = True
-                jump weaptech_first_conversation
-            "sniper" if talkedToSniper == False:
-                $ talkedToSniper = True
-                jump sniper_first_conversation
-            "newbie" if talkedToNewbie == False:
-                $ talkedToNewbie = True
-                jump newbie_first_conversation
-            "leader":
-                jump trishaPlaceholder
+    menu:
+        "who do you want to talk to?"
+        "hacker" if talkedToHacker == False:
+            $ talkedToHacker = True
+            jump hacker_first_conversation
+        "spy" if talkedToSpy == False:
+            $ talkedToSpy = True
+            jump spy_first_conversation
+        "weapons tech" if talkedToWeapTech == False:
+            $ talkedToWeapTech = True
+            jump weaptech_first_conversation
+        "sniper" if talkedToSniper == False:
+            $ talkedToSniper = True
+            jump sniper_first_conversation
+        "newbie" if talkedToNewbie == False:
+            $ talkedToNewbie = True
+            jump newbie_first_conversation
+        "leader" if talkedToLeader == False:
+            $ talkedToLeader = True
+            jump leader_first_conversation
+        "mission briefing" if talkedToHacker and talkedToLeader and talkedToNewbie and talkedToSniper and talkedToSpy and talkedToWeapTech:
+            jump mission_briefing
 
 # HACKER INITIAL CONVERSATION START
 label hacker_first_conversation:
@@ -578,9 +581,69 @@ label youre_in_the_right_place_if_thats:
     newbie "your loss then! see you later"
     mc "see you later"
     jump initial_conversation_menu
-
 # NEWBIE INITIAL CONVERSATION END
 
+# LEADER INITIAL CONVERSATION START
+label leader_first_conversation:
+    "description of the room"
+    menu:
+        leader "how can i help you"
+        "wanted to speak with you":
+            leader "what about?"
+            mc "what can you tell me about that night leader?"
+            jump leader_what_can_you_tell_me_about
+        "what are you looking at?":
+            menu:
+                leader "im going over a report of the mission, we'll be having a meeting later as a team"
+                "what about?":
+                    leader "what about?"
+                    mc "what can you tell me about that night leader?"
+                    jump leader_what_can_you_tell_me_about
+                "have you figured anything out about that night?":
+                    menu:
+                        leader "no, nothing new, it doesnt make sense how it could have gone that badly, they must have known we'd be there"
+                        "so you're sure there's a mole?":
+                            leader "100 sure, we were too careful in our plans, i dont plan missions that go sideways that easily"
+                            mc "what can you tell me about that night leader?"
+                            jump leader_what_can_you_tell_me_about
+                        "what can you tell me about that night?":
+                            jump leader_what_can_you_tell_me_about
+
+
+label leader_what_can_you_tell_me_about:
+    leader "hacker and i were in a van offsite, the woods surrounding the property to be exact, theres a road hidden but still close enough to the building for hacker to be able to hack in"
+    mc "what were you doing?"
+    menu:
+        leader "i was piloting the drone that hacker designed and weap tech built, i like having an eye on the team during high-stake missions like those"
+        "what did you see?":
+            leader "mostly guards changing their shifts, it was good to get a list of government affiliated people from the guests though"
+            jump would_you_say_everyone_did_their_jobs
+        "where did things go sideways?":
+            leader "id say the turning point was when spy lost their visual on the target's hacker, they ran off and went god knows where"
+            leader "but at the same time, hacker got kicked out of the system just minutes before, so maybe that should have been our first warning"
+            jump would_you_say_everyone_did_their_jobs
+
+label would_you_say_everyone_did_their_jobs:
+    mc "would you say everyone did their jobs well?"
+    leader "well for the most part yes"
+    leader "i am a little annoyed by newbie however, they werent supposed to engage with anyone at the party especially not the daughter of the target that we're meant to steal from, i may have to speak to them later"
+    mc "its a shame we lost the thumbdrive"
+    menu:
+        leader "yes...it is a shame...the thumbdrive would have been groundbreaking for the organization"
+        "are you okay?":
+            leader "yes, just thinking about something, dont worry about it"
+            leader "anyway, i should finish going through these reports, ill see you at the meeting"
+            mc "okay have fun"
+            jump initial_conversation_menu
+        "it looks like something's on your mind":
+            leader "theres always a lot on the mind of a rebellion leader, speaking of, i should finish going through these reports, ill see you at the meeting"
+            mc "okay have fun"
+            jump initial_conversation_menu
+# LEADER INITIAL CONVERSATION END
+
+# MISSION BRIEFING START
+
+# MISSION BRIEFING END
 
 label placeholder:
     "has not been written"
