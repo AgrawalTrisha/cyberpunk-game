@@ -534,78 +534,86 @@ label thats_really_weird:
 
 # NEWBIE INITIAL CONVERSATION START
 label newbie_first_conversation:
-    "description of the room"
+    "You enter a bedroom, plain and discreet. It looks like whoever lives here hasn't been here long enough to decorate."
+    "The only signs of a person inhabiting the space is the bed and the walls. The sheets are slightly rumpled and the walls have things on one wall."
+    "There's a poster of the president with a mustache scribbled on it with black marker, a target in the shape of a person, and a picture of the First Squadron on top of hill taken by Emson."
+    "When you look closer, it looks like there's holes in the target, like someone was throwing knives at it. There are holes in the wall behind it too."
+    "There's a woman laying on the ground by the bed. It's Kona."
     menu:
-        newbie "hey whats up mc?"
-        "just wanted to see what you're up to":
+        newbie "Hi! What's up?"
+        "Just wanted to see what you're up to.":
             menu:
-                newbie "oh, just thinking about the last mission, it didn't go how i expected"
-                "it didnt go how anyone expected":
-                    "they laugh but it sounds bitter"
-                    newbie "it really didnt. can i tell you something"
-                    mc "always"
-                    newbie "the mission failing kind of feels like my fault, like what happened during it was because of me and now we lost the thumbdrive"
+                newbie "Oh, just thinking about Backwater. It didn't go how I expected."
+                "It didn't go how anyone expected.":
+                    "She laughs, but it sounds bitter."
+                    newbie "No, it really didn't."
+                    "A pause."
+                    newbie "Can I tell you something?"
+                    mc "Always."
+                    newbie "Backwater failing kind of feels like my fault. Like, what happened during it was because of me and now we lost the thumbdrive."
                     jump newbie_what_happened_on_the_mission
-                "want to talk about it?":
-                    newbie "yeah actually, i feel kinda bad about it, i think its my fault it failed so bad"
+                "Want to talk about it?":
+                    newbie "Yeah, actually. I feel kinda bad about it. I think it's my fault it failed so bad."
                     jump newbie_what_happened_on_the_mission
-        "how you been?":
+        "How you been?":
             menu:
-                newbie "ive been better, the mission was kind of a mess and its been making me a mess too"
-                "want to talk about it?":
-                    newbie "yeah actually, i feel kinda bad about it, i think its my fault it failed so bad"
+                newbie "I've been better. Backwater was kind of a mess and it's been making me a mess too."
+                "Want to talk about it?":
+                    newbie "Yeah, actually. I feel kinda bad about it. I think it's my fault it failed so bad."
                     jump newbie_what_happened_on_the_mission
-                "it didn't go how anyone expected":
-                    "they laugh but it sounds bitter"
-                    newbie "it really didnt. can i tell you something"
-                    mc "always"
-                    newbie "the mission failing kind of feels like my fault, like what happened during it was because of me and now we lost the thumbdrive"
+                "It didn't go how anyone expected.":
+                    "She laughs, but it sounds bitter."
+                    newbie "No, it really didn't."
+                    "A pause."
+                    newbie "Can I tell you something?"
+                    mc "Always."
+                    newbie "Backwater failing kind of feels like my fault. Like, what happened during it was because of me and now we lost the thumbdrive."
                     jump newbie_what_happened_on_the_mission
 
 label newbie_what_happened_on_the_mission:
-    newbie "well, me and weap tech were supposed to get into the target's hacker's office right? hacker was leading us there by looking through the security cameras"
-    newbie "we were supposed to be in and out as spy was distracting the govt hacker meaning the hallway was supposed to be empty, but someone was there"
-    mc "who was there?"
-    "they look uncomfortable"
+    newbie "Well, Erix and I were supposed to get into Jege's office, right? Lilea was leading us there by looking through the security cameras."
+    newbie "We were supposed to be in and out as Emson was distracting Jege. That meant the hallway was supposed to be empty, but someone was there."
+    mc "Who was there?"
+    "Kona looks uncomfortable."
     menu:
-        newbie "it was the targets daughter, i knew we werent supposed to be seen, the only showing their face was supposed to be spy, but i didnt know what else to do, so i spoke to her"
-        "why did you speak to her":
-            newbie "i thought i could distract her? it didnt really work out that way, she distracted me more than anything, i had to be pulled away by weap tech"
+        newbie "It was Maddox's daughter. Her name's Andrea. I knew we weren't supposed to be seen. The only one of us showing our face was supposed to be Emson, but I didn't know what else to do, so i spoke to her."
+        "Why did you speak to her?":
+            newbie "I thought I could distract her. It didn't really work out that way. She distracted me more than anything. I had to be pulled away by Erix."
             jump did_you_get_anything_out_of_her
-        "was she on to you?":
-            newbie "no, it didn't seem like it"
+        "Was she on to you?":
+            newbie "No, it didn't seem like it."
             jump did_you_get_anything_out_of_her
 
 label did_you_get_anything_out_of_her:
-    mc "did you get anything out of her?"
-    newbie "nothing other than she's annoyed with her dad right now, she doesnt seem like a fan of the guy"
+    mc "Did you get anything out of her?"
+    newbie "Nothing other than she's annoyed with her dad right now. She doesn't seem like a fan of the guy."
     menu:
-        newbie "i would have gotten more info i swear, but by that time weap tech yanked me down the hall and leader was giving the call to pull out"
-        "it doesnt sound like you ruined the mission":
-            newbie "oh, thank you, but im still not sure, ill never make the same mistake though, i wont let this team down"
+        newbie "I would have gotten more info, I swear! By that time, Erix yanked me down the hall and Bronx was giving the call to pull out."
+        "It doesn't sound like you ruined the mission.":
+            newbie "Oh, thank you, but I'm still not sure. I'll never make the same mistake though. I wont let this team down."
             jump youre_awfully_determined
-        "did you see anything else?":
-            newbie "the office seemed empty, but we couldnt go in because the daughter was there\nthere sounded like there were people arguing nearby too, i heard someone yelling as we were bolting"
-            mc "could you hear what about?"
-            newbie "no, but if i had to guess, someone was getting yelled at\nif only i had been paying better attention, then i wouldve gotten the drive, or at least better info"
+        "Did you see anything else?":
+            newbie "The office seemed empty, but we couldn't look around for long because Andrea was there. There sounded like there were people arguing nearby too. I heard someone yelling as we were bolting."
+            mc "Could you hear what about?"
+            newbie "No, but if I had to guess, someone was getting yelled at. If only I had been paying better attention. Then I would've gotten the drive, or at least better info."
             jump youre_awfully_determined
 
 label youre_awfully_determined:
-    mc "you're awfully determined"
+    mc "You're awfully determined."
     menu:
-        newbie "anything to take down the tyrants they call the government around here"
-        "it seems like you don't like the govt":
-            newbie "no, too many people have suffered because of them, if i can make this place just a little bit more just, ill have done my job"
-            mc "you're in the right place if that's your goal"
+        newbie "Anything to take down the tyrants they call the government around here."
+        "It seems like you don't like the government.":
+            newbie "No. Too many people have suffered because of them. If I can make this place just a little bit more just, I'll have done my job."
+            mc "You're in the right place if that's your goal."
             jump youre_in_the_right_place_if_thats
-        "you're in the right place if that's your goal":
+        "You're in the right place if that's your goal.":
             jump youre_in_the_right_place_if_thats
 
 label youre_in_the_right_place_if_thats:
-    newbie "no place id rather be! id do anything for this team\nyou really cheered me up mc! thanks, im gonna go to the kitchen for a bite if you want to come"
-    mc "i'm alright, thanks though"
-    newbie "your loss then! see you later"
-    mc "see you later"
+    newbie "No place I'd rather be! I'd do anything for this team. You really cheered me up! Thanks, I'm gonna go to the kitchen for a bite if you want to come."
+    mc "I'm alright. Thanks, though."
+    newbie "Your loss then! See you later."
+    mc "See you later."
     jump initial_conversation_menu
 # NEWBIE INITIAL CONVERSATION END
 
