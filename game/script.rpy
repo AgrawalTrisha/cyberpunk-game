@@ -331,94 +331,99 @@ label the_mission_didnt_go_well:
 
 # WEAPON TECH INITIAL CONVERSATION START
 label weaptech_first_conversation:
-    "description of weapon room"
+    "The room is cluttered, but the organized kind of cluttered. Tables line the walls, covered with scraps, diagrams, and schematics."
+    "The largest table is in the middle of the workshop. Even more weapon schematics are on the walls."
+    "Half-made weapons, drones, and other contraptions are scattered on the various tables."
     menu:
-        "there's a figure bent over a table in the middle of the room, it's the weap tech"
-        "approach the table":
-            "you notice they're working on an explosive, when you walk to the other side of the them, weap tech sees you"
+        "There's a figure bent over the middle table. It's Erix."
+        "Approach the table.":
+            "You notice they're working on an explosive. When you walk to the other side of the them, Erix sees you."
             menu:
-                weaptech "hey! what's up?"
-                "just wanted to talk, you busy?":
-                    weaptech "nope, what do you need?"
-                    mc "what did you do on the mission weap tech?"
+                weaptech "Hey! What's up?"
+                "Just wanted to talk. You busy?":
+                    "Erix wipes her hands on a rag."
+                    weaptech "Nope, what do you need?"
+                    mc "What did you do on the mission, Erix?"
                     jump weaptech_what_did_you_do_on_the_mission
-                "uh, is that a bomb?":
-                    weaptech "yup! good thing you didnt scare me, one wrong move and this room is fire and rubble"
-                    "you eye the bomb carefully"
-                    mc "was that for a mission?"
-                    weaptech "oh no, not anything in particular, it just never hurts to have an explosive around!"
-                    mc "right well i just wanted to chat"
-                    weaptech "oh nice! what about?"
-                    mc "what did you do on the mission weaptech?"
+                "Uh, is that a bomb?":
+                    weaptech "Yup! Good thing you didn't scare me. One wrong move and this room is fire and rubble."
+                    "You eye the bomb carefully."
+                    mc "Is that for a mission?"
+                    weaptech "Oh no, not anything in particular. It just never hurts to have an explosive around!"
+                    mc "Right. Well, I just wanted to chat."
+                    weaptech "Sure, what about?"
+                    mc "What did you do on the mission, Erix?"
                     jump weaptech_what_did_you_do_on_the_mission
-        "hey what're you working on?":
-            "they jolt suddenly, startled"
-            weaptech "no no no!"
-            "they throw what ever was in their hands across the room and drag you out the door to the hallway"
-            mc "why are we out here?"
-            "they press you to the ground and curl up on top of you, not answering"
-            "after a minute, they get up and peek in the door"
+        "Hey. What're you working on?":
+            "Erix jolts suddenly, startled."
+            weaptech "No no no!"
+            "They throw whatever was in their hands across the room and drag you out the door to the hallway."
+            mc "Why are we out here?"
+            "They press you to the ground and curl up on top of you, not answering."
+            "..."
+            "After a minute, they get up and peek in the doorway."
             menu:
-                weaptech "well i was working on an explosive, guess it wasnt a good one"
-                "that was a bomb?":
-                    weaptech "it was supposed to be, no idea why it didn't blow- not that im complaining\nwhat brings you to my shop?"
-                    mc "just wanted to talk, you busy?"
-                    weaptech "nope, what do you need?"
-                    mc "what did you do on the mission weaptech?"
+                weaptech "Well, I was working on an explosive. Guess it wasnt a good one."
+                "That was a bomb?":
+                    weaptech "It was supposed to be. No idea why it didn't blow—not that I'm complaining. What brings you to my shop?"
+                    mc "Just wanted to talk. You busy?"
+                    weaptech "Nope, what do you need?"
+                    mc "What did you do on the mission, Erix?"
                     jump weaptech_what_did_you_do_on_the_mission
-                "was going into the hallway really supposed to save us from an explosion?":
-                    "they drag you into the room again and plop down in their seat"
-                    weaptech "i mean, its better than nothing right? what brought you to my shop though?"
-                    mc "just wanted to talk, you busy?"
-                    weaptech "nope, what do you need?"
-                    mc "what did you do on the mission weaptech?"
+                "Was going into the hallway really supposed to save us from an explosion?":
+                    "They drag you into the room again and plop down in their seat."
+                    weaptech "I mean, it's better than nothing right? What brought you to my shop though?"
+                    mc "Just wanted to talk. You busy?"
+                    weaptech "Nope, what do you need?"
+                    mc "What did you do on the mission, Erix?"
                     jump weaptech_what_did_you_do_on_the_mission
 
 label weaptech_what_did_you_do_on_the_mission:
-    weaptech "i was meant to be newbie's backup, they're talented, but still fresh,im probably the most skilled in combat after sniper and newbie\ntogether we were meant to find the target's hacker's office, where the thumbdrive was supposed to be"
-    mc "was it not there?"
-    weaptech "no, it wasnt, we broke in not long after spy started speaking with the target's hacker"
-    mc "everything worked out though? besides the missing drive?"
+    weaptech "I was meant to be Kona's backup. She's talented, but still fresh. I'm probably the most skilled in combat after Elio and Kona."
+    weaptech "Together we were meant to find Maddox's hacker's office. Jege was supposed to have it there."
+    mc "Was it not there?"
+    weaptech "No, it wasn't. We broke in not long after Emson started speaking with Jege."
+    mc "Everything worked out though? Besides the missing drive?"
     menu:
-        weaptech "well, not quite, the daughter of the target actually spotted us, im not surprised we ran into someone, but im shocked it was her"
-        "why?":
-            weaptech "there werent any guards in the area, the most important corner of the building\nthe hacker's office, the target's office, and even an entire vault in that one hallway"
-            mc "how did you get away?"
-            weaptech "well, i made up some excuse and dragged newbie away, good timing too, leader told us to get out almost immediately after"
-            weaptech "i could have sworn i heard someone yelling at someone else as we ran, sounded angry, but i didnt care, i just wanted to get out in one piece"
+        weaptech "Well, not quite. The daughter of the target—Andrea, I think her name was? She actually spotted us. I'm not surprised we ran into someone, but I'm shocked it was her."
+        "Why?":
+            weaptech "There weren't any guards in that area, the most important corner of the building. Jege's office, Maddox's office, and even an entire vault were in that hallway."
+            mc "How did you get away?"
+            weaptech "Well, I made up some excuse and dragged Kona away. Good timing too, Bronx told us to get out almost immediately after."
+            weaptech "I could have sworn I heard someone yelling at someone else as we ran. Sounded angry, but I didn't care. I just wanted to get out in one piece."
             jump they_stand_and_grab_a_pistol
-        "what did you do?":
+        "What did you do?":
             menu: 
-                weaptech "well by the time i noticed, newbie had struck up conversation with the daughter, i swear, that girl spends so much time with spy, she's taking after the goober"
-                "so they were talking?":
-                    weaptech "like they were old friends, wouldve expected the daughter to immediately pull the alarm, but no, she never did"
-                    weaptech "leader told us to get out of there right when i pulled newbie away"
-                    mc "thats odd that they clicked so well"
-                    weaptech "youre telling me, it was just in time too, i heard voices yelling as we ran, sounded like someone was getting chewed out"
+                weaptech "Well, by the time I noticed, Kona had struck up conversation with the woman. I swear, that girl spends so much time with Emson. She's really taking after the goober."
+                "So they were talking?":
+                    weaptech "Like they were old friends. Would've expected the daughter to immediately pull the alarm, but no, she never did."
+                    weaptech "Bronx told us to get out of there right when I pulled Kona away."
+                    mc "That's odd that they clicked so well."
+                    weaptech "You're telling me. It was just in time too. I heard voices yelling as we ran—sounded like someone was getting chewed out."
                     jump they_stand_and_grab_a_pistol
-                "how did you get away?":
-                    weaptech "well, i made up some excuse and dragged newbie away, good timing too, leader told us to get out almost immediately after"
-                    weaptech "i could have sworn i heard someone yelling at someone else as we ran, sounded angry, but i didnt care, i just wanted to get out in one piece"
+                "How did you get away?":
+                    weaptech "Well, I made up some excuse and dragged Kona away. Good timing too, Bronx told us to get out almost immediately after."
+                    weaptech "I could have sworn I heard someone yelling at someone else as we ran. Sounded angry, but I didn't care. I just wanted to get out in one piece."
                     jump they_stand_and_grab_a_pistol
 
 label they_stand_and_grab_a_pistol:
-    "they stand and grab a pistol off the table, inspecting it carefully"
+    "They stand and grab a pistol off the table, inspecting it carefully."
     menu:
-        weaptech "you like em? this is my baby, ace!"
-        "your baby?":
-            weaptech "yup! built him myself!"
+        weaptech "You like 'em? This is my baby, Ace!"
+        "Your baby?":
+            weaptech "Yup! Built him myself!"
             jump this_bad_boy_packs
-        "why is it called ace?":
-            weaptech "ace is a he, not an it, be nice and i dont know, just felt right"
-            weaptech "i love my baby more than anything! oh but dont tell sniper yeah? itll be our little secret"
-            mc "i guess?"
+        "Why is it called Ace?":
+            weaptech "Ace is a 'he', not an 'it'. Be nice. I don't know why he's called Ace. Just felt right."
+            weaptech "I love my baby more than anything! Oh, but don't tell Elio, yeah? It'll be our little secret."
+            mc "I guess?"
             jump this_bad_boy_packs
 
 label this_bad_boy_packs:
-    weaptech "this bad boy packs more punch than a whole cannon, i was gonna test him after i finished the bomb, but oh well, wanna come watch?"
-    mc "you know, i'm good"
-    weaptech "well, your loss, if you want you can hang around here more, but im gonna go now, see you!"
-    mc "see you"
+    weaptech "Hehe, this bad boy packs more punch than a whole cannon! I was gonna test him after I finished the bomb, but oh well. Wanna come watch?"
+    mc "You know, I'm good."
+    weaptech "Well, your loss. If you want, you can hang around here more, but I'm gonna go now, see you!"
+    mc "See you."
     jump initial_conversation_menu
 # WEAPON TECH INITIAL CONVERSATION END
 
