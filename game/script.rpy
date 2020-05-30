@@ -745,11 +745,11 @@ label second_conversation_menu:
         "Kona." if talkedToNewbie2 == False and numPeopleTalkedTo < 3:
             $ talkedToNewbie2 = True
             $ numPeopleTalkedTo += 1
-            jump trishaPlaceholder
+            jump newbie_second_conversation
         "Bronx." if talkedToLeader2 == False and numPeopleTalkedTo < 3:
             $ talkedToLeader2 = True
             $ numPeopleTalkedTo += 1
-            jump trishaPlaceholder
+            jump leader_second_conversation
         "What's that noise?" if numPeopleTalkedTo == 3:
             jump trishaPlaceholder
 
@@ -1007,6 +1007,89 @@ label wow_whered_you_learn:
     "He turns his back to you."
     jump second_conversation_menu
 # SNIPER SECOND CONVERSATION END
+
+# NEWBIE SECOND CONVERSATION START
+label newbie_second_conversation:
+    "You enter Kona's room, but don't find her anywhere."
+    menu:
+        "You do see a holo on her bed, on and flashing with images."
+        "Inspect holo.":
+            menu:
+                "You pick up the holo. A video is playing on it, muted."
+                "Watch video.":
+                    "It's hard to understand without subtitles, but you recognize the woman that's on the screen."
+                    "It appears to be a documentary about Maddox's family, including his daughter, Andrea. In the video, she's walking down the steps of the same home your team infiltrated, smiling brightly."
+                    "The footage quickly flips to her in a government building, looking stern and cold."
+                    jump newbie_hear_footsteps_from_hallway
+                "Unmute video.":
+                    "You unmute the video and recognize the woman on the screen."
+                    "It appears to be a documentary about Maddox's family, including his daughter, Andrea. In the video, she's walking down the steps of the same home your team infiltrated, smiling brightly."
+                    "\"—by all, Andrea Maddox charms the hearts of every politian she meets. Not many can say they've heard a negative thing about her, besides the fact she hasn't followed in her father's footsteps.\""
+                    "The footage quickly flips to her in a government building looking stern and cold."
+                    "\"Notorious for her adversion to the political scene, Andrea rarely steps foot in her father's office for anything besides a friendly lunch. However, she has been known to share her opinions on recent developments in cybernetics firms such as—\""
+                    jump newbie_hear_footsteps_from_hallway
+        "Search for Kona.":
+            "You take a peek in her bathroom, wondering if she could be there. Not a second later, Kona walks in with a water bottle in hand."
+            newbie "Oh, hi. What're you doing here?"
+            "Her eyes fall to her bed where the holo lays, still on. She darts down to shut it off."
+            "You pretend you never noticed it."
+            jump newbie_i_was_looking_for_you
+
+label newbie_hear_footsteps_from_hallway:
+    menu:
+        "From the hallway, you hear footsteps."
+        "Drop the holo.":
+            "You drop the holo like it burned you, quickly stepping away from the bed. Kona walks in a second later, water bottle in hand."
+            newbie "Oh, hi. What're you doing here?"
+            "Her eyes drift down to her holo and she stiffens, snatching it up and switching it off."
+            jump newbie_i_was_looking_for_you
+        "Look up.":
+            "Kona walks in a second later, water bottle in hand."
+            newbie "Oh, hi. What're you doing here?"
+            menu:
+                "Her eyes drift down to her holo and she stiffens, snatching it up and switching it off."
+                "What are you watching?":
+                    newbie "Oh, I just wanted to get to know Maddox's family. It probably would've been smarter to do that before the mission, but better late than never right?"
+                    mc "Right."
+                    "Kona looks uncomfortable."
+                    newbie "Why are you in my room?"
+                    jump newbie_i_was_looking_for_you
+                "You seem to want to get to know this woman.":
+                    newbie "No! No, I just want to know who I might be dealing with, you know since she saw my face in all..."
+                    mc "Right."
+                    "Kona looks uncomfortable."
+                    newbie "Why are you in my room?"
+                    jump newbie_i_was_looking_for_you
+
+label newbie_i_was_looking_for_you:
+    mc "I was looking for you."
+    menu:
+        newbie "Uh, then how can I help you?"
+        "I think Bronx was a little harsh.":
+            newbie "Oh...he didn't say anything incorrect though."
+            mc "Maybe, but Andrea could be useful."
+            newbie "How so?"
+            mc "She's bound to know things."
+            newbie "I—I don't know if I'm comfortable using someone like that."
+            mc "You don't know her though."
+            "She doesn't say anything for a bit."
+            newbie "Could you get out of my room, please? I'd like to be alone."
+            mc "Oh. Goodbye then?"
+            jump second_conversation_menu
+        "Tell me about why you joined the rebellion.":
+            newbie "I wanted to do good. My family has been taken advantage of by the government since I was little. I want to make life better for them."
+            mc "I know you can do it."
+            newbie "Yeah, I don't know how long after the mistake I made during Backwater. I shouldn't have spoken to Andrea."
+            mc "Maybe, but Andrea could be useful."
+            newbie "How so?"
+            mc "She's bound to know things."
+            newbie "I—I don't know if I'm comfortable using someone like that."
+            mc "You don't know her though."
+            "She doesn't say anything for a bit."
+            newbie "Could you get out of my room, please? I'd like to be alone."
+            mc "Oh. Goodbye then?"
+            jump second_conversation_menu
+# NEWBIE SECOND CONVERSATION END
 
 label placeholder:
     "has not been written"
