@@ -8,6 +8,7 @@ define hacker = Character("Lilea")
 define mc = Character("You")
 define leader = Character("Bronx")
 define spy = Character("Emson")
+define weaptech = Character ("Erix")
 
 
 # The game starts here.
@@ -66,14 +67,15 @@ label initial_conversation_menu:
             "spy" if talkedToSpy == False:
                 $ talkedToSpy = True
                 jump spy_first_conversation
-            "weapons tech":
-                jump placeholder
+            "weapons tech" if talkedToWeapTech == False:
+                $ talkedToWeapTech = True
+                jump trishaPlaceholder
             "sniper":
-                jump placeholder
+                jump trishaPlaceholder
             "newbie":
-                jump placeholder
+                jump trishaPlaceholder
             "leader":
-                jump placeholder
+                jump trishaPlaceholder
 
 # HACKER INITIAL CONVERSATION START
 label hacker_first_conversation:
@@ -89,9 +91,9 @@ label hacker_first_conversation:
                         hacker "trying to find something i dropped, thought i could find it but its kinda dark back here"
                         "thats the problem here?":
                             "hacker looks confused"
-                    hacker_do_you_want_help
+                            jump hacker_do_you_want_help
                         "do you want help?":
-                    hacker_do_you_want_help
+                            jump hacker_do_you_want_help
                 "how did you get back there?":
                     jump how_did_you_get_back_there
         "snoop around":
@@ -114,7 +116,7 @@ label its_me:
         "its hacker!"
         "how did you get back there?":
             jump how_did_you_get_back_there
-        "do you want help?"
+        "do you want help?":
             jump do_you_want_help
 
 label how_did_you_get_back_there:
@@ -174,7 +176,6 @@ label im_sure_newbie_has_their_own_side_to_the_story:
 # HACKER INITIAL CONVERSATION END
 
 # SPY INITIAL CONVERSATION START
-
 label spy_first_conversation:
     "description of spy room"
     "spy is there lying on fainting couch with his eyes closed, theres a journal on his desk"
@@ -186,10 +187,125 @@ label spy_first_conversation:
             menu:
                 spy "just decompressing, i was writing for a bit but it was nothing big"
                 "it looks pretty important, its on real paper":
-                "you got a crush? writing in your diary to them?"
-
+                    "only things that people dont want shared are written on paper, its too easy to get your personal holo hacked if youre not careful"
+                    "the org uses paper for mission plans, weapon/device designs, and other secret info"
+                    menu:
+                        spy "oh yeah, its just some personal stuff, that was my dad's journal so..."
+                        "oh im sorry for prying":
+                            spy "no worries, i admit it is pretty weird for someone to be using an actual journal nowadays, this is just really sentimental for me"
+                            menu:
+                                spy "is there something i can do for you?"
+                                "what did you do on the mission spy?":
+                                    jump what_did_you_do_on_the_mission
+                                "the mission didn't go well did it?":
+                                    jump the_mission_didnt_go_well
+                        "are those drawings?":
+                            "you can see what looks like doodles and sketches on a page sticking out of the journal"
+                            spy "oh yeah they're small"
+                            mc "what of?"
+                            menu:
+                                spy "uh people mostly sometimes places we go to"
+                                "who?":
+                                    "he gets shy"
+                                    menu:
+                                        spy "the team"
+                                        "how sweet, you love us":
+                                            spy "of course i do, you're my family"
+                                            menu:
+                                                spy "speaking of, why'd you waltz into my room like an annoying little sibling"
+                                                "what did you do on the mission spy?":
+                                                    jump what_did_you_do_on_the_mission
+                                                "the mission didn't go well did it?":
+                                                    jump the_mission_didnt_go_well
+                                        "we better not look ugly":
+                                            spy "not more ugly than you all are usually"
+                                            menu:
+                                                spy "say, as much as i love being interrogated, did you need something?"
+                                                "what did you do on the mission spy?":
+                                                    jump what_did_you_do_on_the_mission
+                                                "the mission didn't go well did it?":
+                                                    jump the_mission_didnt_go_well
+                                "what places?":
+                                    menu:
+                                        "mainly places we go to on missions, sometimes i draw maps to study so i don't get lost, also some of the places we see are so gorgeous itd be a crime not to"
+                                        "did you draw a map of this mission?":
+                                            menu:
+                                                spy "i did, as tragic as it went"
+                                                "what did you do on the mission spy?":
+                                                    jump what_did_you_do_on_the_mission
+                                                "the mission didn't go well did it?":
+                                                    jump the_mission_didnt_go_well
+                                        "i bet they're really good, you have an eye for gorgeous things":
+                                            "well of course, beauty knows beauty"
+                                            menu:
+                                                spy "oh, did you need something, you did come in here for smth right?"
+                                                "what did you do on the mission spy?":
+                                                    jump what_did_you_do_on_the_mission
+                                                "the mission didn't go well did it?":
+                                                    jump the_mission_didnt_go_well
+                "you got a crush? writing in your diary to them?":
+                    spy "what! no! theres no one!"
+                    mc "riiiiight"
+                    "he blushes"
+                    menu:
+                        spy "i mean it, but never mind, what did you come to me for?"
+                        "what did you do on the mission spy?":
+                            jump what_did_you_do_on_the_mission
+                        "the mission didn't go well did it?":
+                            jump the_mission_didnt_go_well
         "i wanted to ask how the mission went, i hear it was bad":
-        jump placeholder
+            spy "yeah it wasnt as smooth as it couldve been"
+            mc "what did you do on the mission spy?"
+            jump what_did_you_do_on_the_mission
+
+label what_did_you_do_on_the_mission:
+    spy "i was the distraction, its kinda my thing ya know"
+    spy "i was supposed to keep the target's lapdog out of their office"
+    jump lapdog
+
+label lapdog:
+    mc "lapdog?"
+    spy "yeah, their resident tech guy, hard to call him a hacker when he doesnt hold a candle to ours heh"
+    mc "did you get to them?"
+    spy "yeah i did"
+    menu:
+        spy "we were chatting for a bit, when he suddenly got real agitated and ran away, i guess he figured out something was up, probably was wearing an earpiece"
+        "did he say anything?":
+            menu:
+                spy "nothing that made sense, only: \"no, get out of there, you were supposed to stay out of there\""
+                "thats weird":
+                    spy "yup, but what do you expect from rats? good thing leader gave the order to abort the mission soon afterward"
+                    jump you_really_hate_the_government
+                "do you know what he was talking about?":
+                    spy "no, not at all, government rats rarely make sense"
+                    jump you_really_hate_the_government
+        "what did you do afterwards?":
+            spy "i was going to radio in to leader but then someone else came to talk to me"
+            mc "who came to talk to you?"
+            spy "ah, just some government jerk, low-level riff-raff is all, didn't say anything useful, leader gave the order for us to abort like ten minutes after that anyway"
+            jump you_really_hate_the_government
+
+label you_really_hate_the_government:
+    mc "you really hate the government dont you?"
+    "he gets stony"
+    spy "they're not my favorite people no"
+    spy "hey, i love talking, thats why im so good at my job, but i think i need some me time, the mission kind of tired me out"
+    mc "oh see you then"
+    jump initial_conversation_menu
+
+label the_mission_didnt_go_well:
+    spy "no, no it didn't"
+    spy "i mean, it could've been a lot worse, but it could've been a lot worse"
+    mc "how could it have been worse"
+    spy "we didn't lose anyone this time"
+    "you look at spy awkwardly"
+    spy "sorry, that was grim, hard not to be in this line of work sometimes"
+    spy "i had to deal with the target's lapdog and i get grouchy when i have to socialize with rats"
+    jump lapdog
+# SPY INITIAL CONVERSATION END
 
 label placeholder:
     "has not been written"
+
+label trishaPlaceholder:
+    "code it trish!"
