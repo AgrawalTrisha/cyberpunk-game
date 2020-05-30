@@ -751,7 +751,7 @@ label second_conversation_menu:
             $ numPeopleTalkedTo += 1
             jump leader_second_conversation
         "What's that noise?" if numPeopleTalkedTo == 3:
-            jump trishaPlaceholder
+            jump fight_in_workshop
 
 # HACKER SECOND CONVERSATION START
 label hacker_second_conversation:
@@ -1090,6 +1090,40 @@ label newbie_i_was_looking_for_you:
             mc "Oh. Goodbye then?"
             jump second_conversation_menu
 # NEWBIE SECOND CONVERSATION END
+
+# LEADER SECOND CONVERSATION START
+label leader_second_conversation:
+    "Everyone leaves the war room, but you return to talk to Bronx. He's not there, but Emson is. You don't know when he got here, but he's passed out, head to tabletop. Saltine crumbs surround him."
+    "You notice the drone Bronx was flying by his seat under the table. It's connected to a laptop, where he was reviewing the recording he made. Eyeing Emson, you don't think he'll be waking up anytime soon."
+    "It looks like it was edited to be the most important parts. The whole thing is mostly the top of Maddox's house. It's flying high enough to not be audible or visible."
+    menu:
+        "Speaking of audio, the drone didn't record sound, so the video is silent."
+        "What's that moving?":
+            "Looking closer, it's a man. A guard."
+            "He's walking to the edge of the property and just standing there. The camera zooms in so close you can see his shoulders shaking from the cold."
+            "He stands there for a minute, and because it's zoomed in so close you can see something fall from his hand before he turns around and walks back to the property."
+            "The video zooms out to catch him walking away, but then refocuses on the ground he was standing on before he left. You can tell Bronx was looking for the thing he dropped."
+            "After a second, the drone flies off in the direction you know the van was in and the video ends."
+            "That's an odd ending."
+            jump second_conversation_menu
+        "Where is everyone?":
+            "Looking closely, you can see the hills Elio was postitioned on. The drone keeps turning back to a certain section of the hill line, so you guess he's in that area."
+            "You can see Emson enter the house early on in the night, walking in with the rest of the guests."
+            "Erix and Kona are sneaking in through a window long after Emson gets to talking with Jege."
+            "The guards seem to be going along with their shifts, changing every ten minutes and patroling the lawn of the home."
+            "Everything moves like clockwork, except for one. A single guard moves to the far edge of the property."
+            "He's walking to the edge of the woods and just standing there. The camera zooms in so close you can see his shoulders shaking from the cold."
+            "He stands there for a minute, and because it's zoomed in so close you can see something fall from his hand before he turns around and walks back to the property."
+            "The video zooms out to catch him walking away, but then refocuses on the ground he was standing on before he left. You can tell Bronx was looking for the thing he dropped."
+            "After a second, the drone flies off in the direction you know the van was in and the video ends."
+            "That's an odd ending."
+            jump second_conversation_menu
+# LEADER SECOND CONVERSATION END
+
+# FIGHT START
+label fight_in_workshop:
+    jump trishaPlaceholder
+# FIGHT END
 
 label placeholder:
     "has not been written"
