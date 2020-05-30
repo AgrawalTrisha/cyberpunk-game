@@ -337,7 +337,7 @@ label weaptech_first_conversation:
             menu:
                 weaptech "Hey! What's up?"
                 "Just wanted to talk. You busy?":
-                    "Erix wipes her hands on a rag."
+                    "Erix wipes their hands on a rag."
                     weaptech "Nope, what do you need?"
                     mc "What did you do on the mission, Erix?"
                     jump weaptech_what_did_you_do_on_the_mission
@@ -929,13 +929,13 @@ label reminds_me_of_my_own_designs:
     "It is a snake, curled up in a circle right in the trigger grip."
     mc "Why sign your work? They could trace it back to you."
     weaptech "They could, but I'm not worried."
-    "She smiles, but it seems there's a deeper meaning than you understand."
+    "They smile, but it seems there's a deeper meaning than you understand."
     weaptech "Besides, when you make a masterpiece. It's hard not to take credit."
     mc "What if someone steals your designs?"
     weaptech "Well, that would mean someone gave someone my designs or a sample weapon."
-    "She smiles again."
+    "They smile again."
     weaptech "I wouldn't worry about that."
-    "She make their way to another table before busying themself with another weapon. Something under the table in front of you catches your eye."
+    "They make their way to another table before busying themself with another weapon. Something under the table in front of you catches your eye."
     "There's a metal box and at first glance. It just seems to be discarded guns. You look up at Erix to ask them what it is, but they're gone."
     menu:
         "Elio is still in the room."
@@ -996,7 +996,7 @@ label wow_whered_you_learn:
     mc "You seem to have a pretty strong character."
     sniper "I didn't always, and I'm not sure I do even now."
     "He looks down at the gun part in his hand."
-    sniper "I owe a lot to Erix for all she's done to make me strong, but some days I feel weak."
+    sniper "I owe a lot to Erix for all they've done to make me strong, but some days I feel weak."
     mc "How so?"
     sniper "I cannot forget my time with the government completely."
     "He looks uncomfortable."
@@ -1024,7 +1024,7 @@ label newbie_second_conversation:
                 "Unmute video.":
                     "You unmute the video and recognize the woman on the screen."
                     "It appears to be a documentary about Maddox's family, including his daughter, Andrea. In the video, she's walking down the steps of the same home your team infiltrated, smiling brightly."
-                    "\"—by all, Andrea Maddox charms the hearts of every politian she meets. Not many can say they've heard a negative thing about her, besides the fact she hasn't followed in her father's footsteps.\""
+                    "\"—by all, Andrea Maddox charms the hearts of every politician she meets. Not many can say they've heard a negative thing about her, besides the fact she hasn't followed in her father's footsteps.\""
                     "The footage quickly flips to her in a government building looking stern and cold."
                     "\"Notorious for her adversion to the political scene, Andrea rarely steps foot in her father's office for anything besides a friendly lunch. However, she has been known to share her opinions on recent developments in cybernetics firms such as—\""
                     jump newbie_hear_footsteps_from_hallway
@@ -1132,11 +1132,11 @@ label fight_in_workshop:
     leader "No, Lilea! I won't risk this team for a drive I—"
     "He stops suddenly."
     "The other three think he stopped for some other reason, but you can tell it's because he almost said something he didn't mean to."
-    "Erix looks around and sees you in the doorway. She gives you a smile."
+    "Erix looks around and sees you in the doorway. They give you a smile."
     weaptech "Oh, hey. Sorry if we disturbed you. We were just talking."
     "You get the feeling that was a dismissal."
     "Lilea sighs and brushes past you, Bronx following a second after he collects himself."
-    "When you look at Erix, she's turned around and fiddling with a scrap of metal at another bench."
+    "When you look at Erix, they're turned around and fiddling with a scrap of metal at another bench."
     "Elio just stands there looking at the table."
 # FIGHT END
 
@@ -1248,6 +1248,39 @@ label spy_why_do_you_hate_the_government:
     jump third_conversation_menu
 # SPY THIRD CONVERSATION END
 
+# WEAPONS TECH THIRD CONVERSATION START
+label weaptech_third_conversation:
+    "Erix is standing in their workshop, silently moving boxes around. When you get close enough, they look up and offer a small smile."
+    menu:
+        weaptech "Good timing. I was wanting to talk to you."
+        "What did you want to talk about?":
+            jump you_think_they_were_stolen
+        "I was too.":
+            weaptech "Oh. I'm sure what you want to say is important, but I really need to tell you this. Can I go first?"
+            mc "Go ahead."
+            jump you_think_they_were_stolen
+
+label you_think_they_were_stolen:
+    weaptech "Well, I've been thinking about my designs..."
+    weaptech "I've been thinking about if someone stole them."
+    mc "You think they were stolen?"
+    weaptech "No, they weren't."
+    "They gesture to a box they just moved."
+    weaptech "All my designs have a snake insignia."
+    "They point to a curled snake stamped on a revolver."
+    weaptech "This is a box of confiscated weapons. Whatever Elio or Kona or whomever finds during missions. They collect them for me to tinker with and this box is all from a street gang, the Rattlesnakes."
+    mc "The Rattlesnakes?"
+    weaptech "Yeah, stupid name. I know, but they were my old gang."
+    mc "You were in a street gang?"
+    weaptech "Yeah. Before I joined the rebellion, I worked with them to stay alive. It's where I met Elio."
+    mc "Elio?"
+    weaptech "Yeah, but that's his story to tell. I just wanted to be honest with you. Elio already knows, but I was gonna tell the rest of the team at our next mission."
+    weaptech "I just ran into you first and can tell you wouldn't judge me too hard."
+    mc "No one will think of you differently."
+    weaptech "Oh, thank you. Well, I gotta upcycle a machine gun Lilea found in a dumpster last week. Thanks for being understanding."
+    mc "Anytime."
+    jump third_conversation_menu
+# WEAPONS TECH THIRD CONVERSATION END
 
 label placeholder:
     "has not been written"
