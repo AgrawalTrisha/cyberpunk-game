@@ -1317,8 +1317,40 @@ label sniper_tells_you_his_past:
     mc "Bye?"
     "He doesn't respond."
     jump third_conversation_menu
-
 # SNIPER THIRD CONVERSATION END
+
+# NEWBIE THIRD CONVERSATION START
+label newbie_third_conversation:
+    "You find Kona standing in her room with a bowl of cereal. You don't know where she got the cereal, or why she's standing. She nods in greeting when you look at her."
+    mc "I need you to explain your thing with Andrea."
+    newbie "I don't know her if that's what you think. That time was our first meeting."
+    "She sets her bowl down on her bed precariously."
+    menu:
+        newbie "She was nice to me, okay?"
+        "What do you mean 'nice'?":
+            newbie "I thought she would be mean. She's the daughter of Flint Maddox for goodness' sakes! I was expecting to be dead the second I looked at her, but no. She just made conversation with me."
+            jump so_you_just_want_a_friend
+        "Are people usually not nice to you?":
+            newbie "I mean, I have had trouble with making connections with people in the past. Besides the First Squadron, Andrea was the nicest stranger I've ever spoken to."
+            jump so_you_just_want_a_friend
+
+label so_you_just_want_a_friend:
+    mc "So... you just want a friend?"
+    newbie "No! I mean, yeah, I like friends... but you make it sound like I don't have any. She just wasn't what I expected."
+    newbie "I've been looking her up, and she's nothing like the rest of those government types. In fact, she seems to hate the government!"
+    mc "That sounds too good to be true."
+    newbie "Maybe, but I trust her. I've just met her, but I trust her. I think she could be a strong ally if we talk to her."
+    mc "Bronx might consider it."
+    newbie "I'm gonna ask him about it. I feel it. Andrea could really help!"
+    mc "You better be making the right choice."
+    newbie "I am! I bet my life on this woman!"
+    "She grabs you in a tight hug for a moment, and then races out the door."
+    jump third_conversation_menu
+# NEWBIE THIRD CONVERSATION END
+
+# LEADER THIRD CONVERSATION START
+
+# LEADER THIRD CONVERSATION END
 
 label placeholder:
     "has not been written"
