@@ -737,7 +737,7 @@ label second_conversation_menu:
         "Erix." if talkedToWeapTech2 == False and numPeopleTalkedTo < 3:
             $ talkedToWeapTech2 = True
             $ numPeopleTalkedTo += 1
-            jump trishaPlaceholder
+            jump weaptech_second_conversation
         "Elio." if talkedToSniper2 == False and numPeopleTalkedTo < 3:
             $ talkedToSniper2 = True
             $ numPeopleTalkedTo += 1
@@ -903,6 +903,59 @@ label i_dont_know_much_about_families:
     mc "Bye."
     jump second_conversation_menu
 # SPY SECOND CONVERSATION END
+
+# WEAPON TECH SECOND CONVERSATION
+label weaptech_second_conversation:
+    "You find both Erix and Elio in the workshop, but they're on separate sides of the room. Erix smiles at you and calls you over."
+    weaptech "Hey! Come look at this!"
+    menu:
+        "The table in front of them has metal parts strewn across it."
+        "What is it?":
+            weaptech "It's a rocket launcher! Or...I suppose it was. Elio found it in the woods and brought it to me to tinker with. Isn't he sweet?"
+            mc "Very sweet."
+            weaptech "Yup. He's secretly a romantic. It's actually super well made. Reminds me of my own designs."
+            jump reminds_me_of_my_own_designs
+        "How... impressive.":
+            "You don't even know what it is silly! It's a deconstructed rocket launcher. It's awfully complex, I admit. Reminds me of my own designs."
+            jump reminds_me_of_my_own_designs
+
+label reminds_me_of_my_own_designs:
+    mc "How does it remind you of your designs?"
+    weaptech "Well, its construction is very well thought out. You can tell by the trigger lock. It doesn't interfere with the main combustion chamber at all, meaning there's no way it could misfire or jam. That's a common issue in these models."
+    mc "What if it is your design?"
+    weaptech "Oh no, that's not possible. My designs always have a signature. Look closely."
+    "They heft up a rifle that was underneath the table."
+    weaptech "See? There's a little insignia right there. It's a snake."
+    "It is a snake, curled up in a circle right in the trigger grip."
+    mc "Why sign your work? They could trace it back to you."
+    weaptech "They could, but I'm not worried."
+    "She smiles, but it seems there's a deeper meaning than you understand."
+    weaptech "Besides, when you make a masterpiece. It's hard not to take credit."
+    mc "What if someone steals your designs?"
+    weaptech "Well, that would mean someone gave someone my designs or a sample weapon."
+    "She smiles again."
+    weaptech "I wouldn't worry about that."
+    "She make their way to another table before busying themself with another weapon. Something under the table in front of you catches your eye."
+    "There's a metal box and at first glance. It just seems to be discarded guns. You look up at Erix to ask them what it is, but they're gone."
+    menu:
+        "Elio is still in the room."
+        "\"Hey, Elio? What's this?\"":
+            "He turns around."
+            sniper "Those are confiscated weapons from past missions. I believe that box is specifically from street gangs."
+            "Looking closer, you notice an engraving in the trigger lock."
+            "A single curled snake."
+            "As soon as you notice it, Erix walks back into the room."
+            weaptech "Wanna see Ace? I had to go check my bedroom for a piece, but I think I figured out how to make him lighter to carry!"
+            mc "Maybe next time."
+            weaptech "Oh, shame. Well, see you!"
+            jump second_conversation_menu
+        "Leave the box alone.":
+            "You slide the box back under the table and stand up to go. As you do, Erix walks in."
+            weaptech "Leaving so soon? I wanted to show you Ace. I checked my bedroom for a piece, and found something that could make his carrying weight lighter!"
+            mc "Maybe next time."
+            weaptech "Oh, shame. Well, see you!"
+            jump second_conversation_menu
+# WEAPON TECH SECOND CONVERSATION
 
 label placeholder:
     "has not been written"
