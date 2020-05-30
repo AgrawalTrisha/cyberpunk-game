@@ -619,103 +619,104 @@ label youre_in_the_right_place_if_thats:
 
 # LEADER INITIAL CONVERSATION START
 label leader_first_conversation:
-    "description of the room"
+    "The room is bare, except for a piece of paper taped high up on the wall, almost to the ceiling. It looks like \"THE WAR ROOM\" is written with crayon on the paper."
+    "There's a long conference table in the center of the room, eight seats pushed in. Bronx is sitting at the end, files spread out before him. He looks up when you enter."
     menu:
-        leader "how can i help you"
-        "wanted to speak with you":
-            leader "what about?"
-            mc "what can you tell me about that night leader?"
+        leader "How can I help you?"
+        "Wanted to speak with you.":
+            leader "What about?"
+            mc "What can you tell me about Backwater, Bronx?"
             jump leader_what_can_you_tell_me_about
-        "what are you looking at?":
+        "What are you looking at?":
             menu:
-                leader "im going over a report of the mission, we'll be having a meeting later as a team"
-                "what about?":
-                    leader "what about?"
-                    mc "what can you tell me about that night leader?"
+                leader "I'm going over a report of the events that happened at Backwater. We'll be having a meeting later as a team."
+                "What about?":
+                    leader "Where we go after the last mission. Speaking of, what did you come in here for? Did you have a question?"
+                    mc "What can you tell me about Backwater, Bronx?"
                     jump leader_what_can_you_tell_me_about
                 "have you figured anything out about that night?":
                     menu:
-                        leader "no, nothing new, it doesnt make sense how it could have gone that badly, they must have known we'd be there"
-                        "so you're sure there's a mole?":
-                            leader "100 sure, we were too careful in our plans, i dont plan missions that go sideways that easily"
-                            mc "what can you tell me about that night leader?"
+                        leader "No, nothing new. It doesn't make sense how it could have gone that badly. They must have known we'd be there."
+                        "So you're sure there's a mole?":
+                            leader "100 percent sure. We were too careful in our plans. I don't plan missions that go sideways that easily."
+                            mc "What can you tell me about Backwater, Bronx?"
                             jump leader_what_can_you_tell_me_about
-                        "what can you tell me about that night?":
+                        "What can you tell me about Backwater, Bronx?":
                             jump leader_what_can_you_tell_me_about
 
 
 label leader_what_can_you_tell_me_about:
-    leader "hacker and i were in a van offsite, the woods surrounding the property to be exact, theres a road hidden but still close enough to the building for hacker to be able to hack in"
-    mc "what were you doing?"
+    leader "Lilea and I were in a van offsite. The woods surrounding the property to be exact. There's a road hidden but still close enough to Maddox's house for Lilea to be able to hack in."
+    mc "What were you doing?"
     menu:
-        leader "i was piloting the drone that hacker designed and weap tech built, i like having an eye on the team during high-stake missions like those"
-        "what did you see?":
-            leader "mostly guards changing their shifts, it was good to get a list of government affiliated people from the guests though"
+        leader "I was piloting the drone that Lilea designed and Erix built. I like having an eye on the team during high-stake missions like Backwater."
+        "What did you see?":
+            leader "Mostly guards changing their shifts. It was good to get a list of government affiliated people from the guests though. We can use who we saw there too compile a list of enemies."
             jump would_you_say_everyone_did_their_jobs
-        "where did things go sideways?":
-            leader "id say the turning point was when spy lost their visual on the target's hacker, they ran off and went god knows where"
-            leader "but at the same time, hacker got kicked out of the system just minutes before, so maybe that should have been our first warning"
+        "Where did things go sideways?":
+            leader "I'd say the turning point was when Emson lost their visual on Maddox's hacker, Jege. They ran off and went God knows where."
+            leader "But at the same time, Lilea got kicked out of the system just minutes before, so maybe that should have been our first warning."
             jump would_you_say_everyone_did_their_jobs
 
 label would_you_say_everyone_did_their_jobs:
-    mc "would you say everyone did their jobs well?"
-    leader "well for the most part yes"
-    leader "i am a little annoyed by newbie however, they werent supposed to engage with anyone at the party especially not the daughter of the target that we're meant to steal from, i may have to speak to them later"
-    mc "its a shame we lost the thumbdrive"
+    mc "Would you say everyone did their jobs well?"
+    leader "Well, for the most part, yes."
+    leader "I am a little annoyed by Kona however. She wasn't supposed to engage with anyone at the party. Especially not the daughter of the target that we're meant to steal from. I may have to speak to her later."
+    mc "It's a shame we lost the thumbdrive."
+    leader "Yes..."
+    leader "It is a shame..."
     menu:
-        leader "yes...it is a shame...the thumbdrive would have been groundbreaking for the organization"
-        "are you okay?":
-            leader "yes, just thinking about something, dont worry about it"
-            leader "anyway, i should finish going through these reports, ill see you at the meeting"
-            mc "okay have fun"
+        leader "The thumbdrive would have been groundbreaking for the Rebellion."
+        "Are you okay?":
+            leader "Yes, just thinking about something. Don't worry about it."
+            leader "Anyway, I should finish going through these reports. I'll see you at the meeting."
+            mc "Okay, have fun."
             jump initial_conversation_menu
-        "it looks like something's on your mind":
-            leader "theres always a lot on the mind of a rebellion leader, speaking of, i should finish going through these reports, ill see you at the meeting"
-            mc "okay have fun"
+        "It looks like something's on your mind.":
+            leader "There's always a lot on the mind of a rebellion leader. Speaking of, I should finish going through these reports. I'll see you at the meeting."
+            mc "Okay, have fun."
             jump initial_conversation_menu
 # LEADER INITIAL CONVERSATION END
 
 # MISSION BRIEFING START
 label mission_briefing:
-    "in the war room, everyone is there"
-    "leader is talking abt what they could do from here"
-    leader "did you get any info that we can use spy?"
-    spy "nothing we didnt already know"
-    leader "hacker?"
-    hacker "we were able to get a better idea of who is involved with govt affairs, it was more public figures than we thought"
-    weaptech "you mean like celebrities?"
-    hacker "yeah, we knew about some, but there were so many more guests than we expected"
-    sniper "you are referring to the target's daughter"
-    hacker "well, i suppose, she wasnt supposed to be at her fathers house at all this month"
-    leader "speaking of, ill take this time to remind the team that we have assigned jobs for a reason, i give you tasks that fit you, so stick to them"
-    "theres an awkward pause"
-    newbie "i was just trying to help"
-    leader "i know that and everyone here appreciates that-"
-    sniper "i did not appreciate it"
-    "weap tech hits sniper"
-    hacker "yeah, he has a point, youre new newbie, but that doesnt mean we dont have a system to things"
-    spy "well hey now everybody, newbie was only trying to help, we've all made mistakes on missions before"
-    sniper "i do not"
-    "weap tech hits him again"
-    leader "that's true, but no one has deliberately disobeyed directions before, it wont happen again"
-    newbie "youre right, it wont, im sorry for messing up like that"
-    hacker "whyd you even make conversation with her for so long? you could have made up an excuse and left or something"
-    newbie "um"
-    weaptech "yeah, it seemed like she wanted to speak with you for some reason"
-    spy "i hope youre not suggesting something"
-    weaptech "no no! just saying"
-    sniper "do you know the daughter newbie?"
-    newbie "no! of course not, ive never met her before"
-    spy "newbie is not friends with anyone from the government, right newbie?"
-    newbie "no, no im not"
-    spy "so there you go, id appreciate it if you would stop throwing accusations like that of my friend"
-    weaptech "newbie is our friend too spy"
-    leader "and no one is accusing anyone of anything"
-    "leader avoids your gaze when he says that"
-    leader "this meeting was to establish the groundwork for where we go next"
-    leader "i was banking on whatever we gleaned from the last mission to provide direction for the next, but because we didnt learn much, we'll have to find something else to do"
-    leader "i'll call another meeting when i have a plan, get some rest for now"
-    "the meeting ends"
+    "You got a message from Bronx asking for your presence in the War Room. When you enter, everyone is there. Bronx is talking about what the team could do from moving foreward."
+    leader "Did you get any info that we can use Emson?"
+    spy "Nothing we didn't already know."
+    leader "Lilea?"
+    hacker "We were able to get a better idea of who is involved with government affairs. There were more public figures than we thought."
+    weaptech "You mean like celebrities?"
+    hacker "Yeah. We knew about some, but there were so many more guests than we expected."
+    sniper "You are referring to Maddox's daughter."
+    hacker "Well, I suppose. She wasn't supposed to be at her father's house at all this month."
+    leader "Speaking of, I'll take this time to remind the team that we have assigned jobs for a reason. I give you tasks that fit you, so please stick to them."
+    "There's an awkward pause."
+    newbie "I was just trying to help."
+    leader "I know that, and everyone here appreciates that-"
+    sniper "I did not appreciate it."
+    "Erix gives Elio a nasty look."
+    hacker "Yeah, he has a point. You're new Kona, but that doesn't mean we don't have a system for things."
+    spy "Well hey now everybody. Kona was only trying to help. We've all made mistakes on missions before."
+    sniper "I have not."
+    "Erix glares at him again."
+    leader "That's true, but no one has deliberately disobeyed directions before. It won't happen again."
+    newbie "You're right. It won't. I'm sorry for messing up like that."
+    hacker "Why'd you even make conversation with her for so long? You could have made up an excuse and left or something."
+    newbie "Um."
+    weaptech "Yeah. It seemed like she wanted to speak with you for some reason."
+    spy "I hope you're not suggesting something."
+    weaptech "No no! Just saying."
+    sniper "Do you know Maddox's daughter, Kona?"
+    newbie "No! Of course not! I've never met her before."
+    spy "Kona is not friends with any of our enemies. Right, Kona?"
+    newbie "No, no. I'm not"
+    spy "So there you go, I'd appreciate it if you would stop throwing accusations like that at my friend."
+    weaptech "Kona is our friend too, Em."
+    leader "And no one is accusing anyone of anything."
+    "Bronx avoids your gaze when he says that."
+    leader "This meeting was to establish the groundwork for where we go next. I was banking on whatever we gleaned from Backwater to provide direction for the next, but because we didn't learn much, we'll have to find something else to do."
+    leader "I'll call another meeting when I have a plan. Get some rest for the time being."
+    "With that dismissal, everyone files out of the room."
 # MISSION BRIEFING END
 
 label second_conversation_menu:
