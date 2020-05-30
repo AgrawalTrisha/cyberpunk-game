@@ -2,21 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 117: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
-    "do you want help?"
-                       ^
-
-File "game/script.rpy", line 190: menu statement expects a non-empty block.
+File "game/script.rpy", line 485: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
     menu:
-        ^
-
-File "game/script.rpy", line 192: expected statement.
-    "oh im sorry for prying":
-                            ^
-
-File "game/script.rpy", line 200: expected statement.
-    "are those drawings?":
-                         ^
+    ^
 
 Ren'Py Version: Ren'Py 7.3.0.271
-Fri May 29 21:50:46 2020
+Fri May 29 23:22:31 2020

@@ -363,20 +363,33 @@ label weaptech_what_did_you_do_on_the_mission:
             mc "how did you get away?"
             weaptech "well, i made up some excuse and dragged newbie away, good timing too, leader told us to get out almost immediately after"
             weaptech "i could have sworn i heard someone yelling at someone else as we ran, sounded angry, but i didnt care, i just wanted to get out in one piece"
-            "they stand and grab a pistol off the table, inspecting it carefully"
-            menu:
-                weaptech "you like em? this is my baby, ace!"
-                "your baby?":
-                    weaptech "yup! built him myself!"
-                    jump this_bad_boy_packs
-                "why is it called ace?":
-                    weaptech "ace is a he, not an it, be nice and i dont know, just felt right"
-                    weaptech "i love my baby more than anything! oh but dont tell sniper yeah? itll be our little secret"
-                    mc "i guess?"
-                    jump this_bad_boy_packs
+            jump they_stand_and_grab_a_pistol
         "what did you do?":
             menu: 
                 weaptech "well by the time i noticed, newbie had struck up conversation with the daughter, i swear, that girl spends so much time with spy, she's taking after the goober"
+                "so they were talking?":
+                    weaptech "like they were old friends, wouldve expected the daughter to immediately pull the alarm, but no, she never did"
+                    weaptech "leader told us to get out of there right when i pulled newbie away"
+                    mc "thats odd that they clicked so well"
+                    weaptech "youre telling me, it was just in time too, i heard voices yelling as we ran, sounded like someone was getting chewed out"
+                    jump they_stand_and_grab_a_pistol
+                "how did you get away?":
+                    weaptech "well, i made up some excuse and dragged newbie away, good timing too, leader told us to get out almost immediately after"
+                    weaptech "i could have sworn i heard someone yelling at someone else as we ran, sounded angry, but i didnt care, i just wanted to get out in one piece"
+                    jump they_stand_and_grab_a_pistol
+
+label they_stand_and_grab_a_pistol:
+    "they stand and grab a pistol off the table, inspecting it carefully"
+    menu:
+        weaptech "you like em? this is my baby, ace!"
+        "your baby?":
+            weaptech "yup! built him myself!"
+            jump this_bad_boy_packs
+        "why is it called ace?":
+            weaptech "ace is a he, not an it, be nice and i dont know, just felt right"
+            weaptech "i love my baby more than anything! oh but dont tell sniper yeah? itll be our little secret"
+            mc "i guess?"
+            jump this_bad_boy_packs
 
 label this_bad_boy_packs:
     weaptech "this bad boy packs more punch than a whole cannon, i was gonna test him after i finished the bomb, but oh well, wanna come watch?"
@@ -400,18 +413,92 @@ label sniper_first_conversation:
                             sniper "its what is necessary for the safety of myself and the people around me...or at least the people who arent on the other side of the muzzle"
                             "there's a pause..."
                             sniper "why did you come to me"
-                            mc "i wanted to ask about the last mission"
-                            sniper "he looks at mc"
                             jump sniper_what_did_you_do_on_the_mission
                         "explains why you're so good at it":
-                            jump trishaPlaceholder
+                            sniper "i have lots of experience yes"
+                            "theres a pause..."
+                            sniper "why did you come to me"
+                            jump sniper_what_did_you_do_on_the_mission
                 "you look scary like that":
-                    jump trishaPlaceholder
+                    sniper "i've been told that before"
+                    sniper "why did you come to me"
+                    jump sniper_what_did_you_do_on_the_mission
         "hi sniper":
-            jump trishaPlaceholder
+            "he turns around"
+            menu:
+                sniper "hello"
+                "that's a big rifle":
+                    sniper "it does its job"
+                    "there's a pause..."
+                    sniper "why did you come to me"
+                    jump sniper_what_did_you_do_on_the_mission
+                "is this a bad time?":
+                    sniper "no, i can spare time, why did you come here"
+                    jump sniper_what_did_you_do_on_the_mission
 
 label sniper_what_did_you_do_on_the_mission:
+    mc "i wanted to ask about the last mission"
+    sniper "he looks at mc"
+    mc "what did you do on the last mission?"
+    sniper "my job was to provide cover and visual for the group"
+    menu:
+        sniper "i was stationed in the hills adjacent to the target's building with a clear view of the front and back entrances"
+        "what did you see there?":
+            menu:
+                sniper "i saw people entering the front entrance in the beginning of the evening and not much movement from the back entrance"
+                "who was entering the front?":
+                    sniper "regular visitors, low-level government officials, and the like"
+                    mc "did you see anyone else in the front of the property?"
+                    menu:
+                        sniper "in fact yes, part of the way through the night, i saw a single guard stand outside by the outskirts of the property"
+                        "what was the guard doing?":
+                            sniper "i saw him loiter around for a while, about five minutes before staring into the woods surrounding the property\nthen he suddenly turned around and stalked back to the building"
+                            jump thats_really_weird
+                        "was he not supposed to be there?":
+                            sniper "usually the guards are in teams of two, i get the feeling he wasnt meant to be there"
+                            sniper "he stood by the woods for a short amount of time before suddenly stalking back to the building"
+                            jump thats_really_weird
+                "what was happening at the back entrance?":
+                    sniper "it seemed that was the main entrance for catering and security\ni saw food being carried in and guards changing shifts through that door"
+                    jump was_there_anything_you_that_was_different
+        "did everything look good?":
+            menu:
+                sniper "yes, there was no suspicious activity besides what was to be expected of the situation"
+                "what was expected of the sitation?":
+                    sniper "the guest list was to be made up of people wrapped up in government secrets, everyone there was complacent in their crimes"
+                    mc "so nothing stuck out to you?"
+                    sniper "i suppose somethind did now that you remind me"
+                    menu:
+                        sniper "part of the way through the night, i saw a single guard stand outside by the outskirts of the property"
+                        "what was the guard doing?":
+                            sniper "i saw him loiter around for a while, about five minutes before staring into the woods surrounding the property\nthen he suddenly turned around and stalked back to the building"
+                            jump thats_really_weird
+                        "was he not supposed to be there?":
+                            sniper "usually the guards are in teams of two, i get the feeling he wasnt meant to be there"
+                            sniper "he stood by the woods for a short amount of time before suddenly stalking back to the building"
+                            jump thats_really_weird
+                "was there anything you that was different?":
+                    jump was_there_anything_you_that_was_different
 
+label was_there_anything_you_that_was_different:
+    mc "was there anything you that was different?"
+    menu:
+        sniper "different? i suppose there was something that was unexpected, but not overtly suspicious\npart of the way through the night, i saw a single guard stand outside by the outskirts of the property"
+        "what was the guard doing?":
+            sniper "i saw him loiter around for a while, about five minutes before staring into the woods surrounding the property\nthen he suddenly turned around and stalked back to the building"
+            jump thats_really_weird
+        "was he not supposed to be there?":
+            sniper "usually the guards are in teams of two, i get the feeling he wasnt meant to be there"
+            sniper "he stood by the woods for a short amount of time before suddenly stalking back to the building"
+            jump thats_really_weird
+
+label thats_really_weird:
+    mc "that's really weird"
+    sniper "i dont use that word, but yes, i suppose it was weird"
+    "he looks down at the weapon on the floor in front of him"
+    sniper "i would like to continue cleaning my rifle"
+    mc "oh yeah bye"
+    jump initial_conversation_menu
 # SNIPER INITIAL CONVERSATION END
 
 
