@@ -24,22 +24,29 @@ label start:
     $ talkedToNewbie = False
     $ talkedToLeader = False
 
+# EXPOSITION START
+    "The year is 3158. Androids join humans on the streets and in the workforce. Disease has been near eradicated and world hunger is barely an issue anymore."
+    "The enemy of the people is instead one of the oldest known to man: the government."
+    "In order to restore power to the people, a resistance has formed to fight the standing administration. You are part of that organization."
+    "Known simply as \"the Rebellion\", your organization is underground, made up of a network of factions across the country."
+    "Your faction is the first and founding one, aptly named the \"First Squadron\"."
+    "You were working abroad trying to find allies across the sea. Now that you've returned, you realize things have gone downhill."
+    "You're in Bronx's office, the leader of Squadron 1, listening to him recount the team's last mission."
+# EXPOSITION END
+
+# BRONX EXPOSITION START
     scene bg room
 
     show leader neutral
 
-    leader "youre part of an organization"
-    leader "there was a failed mission not long ago that you werent a part of"
-    mc "what happened on the mission"
-    leader "explains how the mission went down"
-    mc "what does this have to do with me?"
-    leader "you gotta find the mole"
-    mc "who could it be"
-    leader "has to be someone on the mission, high clearance only"
-    mc "who's high clearance"
-    leader "character descriptions"
+    "Bronx shifts around in his seat."
+    leader "This mission was called Operation Backwater. Our target was Flint Maddox, current Secretary of Defense."
+    leader "The objective was to gather information on a thumbrive that was supposed to be in his home."
+    leader "The opportunity to steal the drive arose when we got word he'd be hosting a gala. That drive was supposed to have vital information that could change everything for the Rebellion."
+    leader "It was supposed to be in Oran Jege's office. Jege is Maddox's resident 'computer specialist', but that's just codeword for hacker."
+    leader "When we infiltrated Maddox's gala, it wasn't there and we left empty-handed."
     jump initial_conversation_menu
-
+# BRONX EXPOSITION END
     return
 
 label initial_conversation_menu:
