@@ -8,7 +8,8 @@ define hacker = Character("Lilea")
 define mc = Character("You")
 define leader = Character("Bronx")
 define spy = Character("Emson")
-define weaptech = Character ("Erix")
+define weaptech = Character("Erix")
+define sniper = Character("Elio")
 
 
 # The game starts here.
@@ -69,9 +70,10 @@ label initial_conversation_menu:
                 jump spy_first_conversation
             "weapons tech" if talkedToWeapTech == False:
                 $ talkedToWeapTech = True
-                jump trishaPlaceholder
-            "sniper":
-                jump trishaPlaceholder
+                jump weaptech_first_conversation
+            "sniper" if talkedToSniper == False:
+                $ talkedToSniper = True
+                jump sniper_first_conversation
             "newbie":
                 jump trishaPlaceholder
             "leader":
@@ -196,7 +198,7 @@ label spy_first_conversation:
                             menu:
                                 spy "is there something i can do for you?"
                                 "what did you do on the mission spy?":
-                                    jump what_did_you_do_on_the_mission
+                                    jump spy_what_did_you_do_on_the_mission
                                 "the mission didn't go well did it?":
                                     jump the_mission_didnt_go_well
                         "are those drawings?":
@@ -214,7 +216,7 @@ label spy_first_conversation:
                                             menu:
                                                 spy "speaking of, why'd you waltz into my room like an annoying little sibling"
                                                 "what did you do on the mission spy?":
-                                                    jump what_did_you_do_on_the_mission
+                                                    jump spy_what_did_you_do_on_the_mission
                                                 "the mission didn't go well did it?":
                                                     jump the_mission_didnt_go_well
                                         "we better not look ugly":
@@ -222,7 +224,7 @@ label spy_first_conversation:
                                             menu:
                                                 spy "say, as much as i love being interrogated, did you need something?"
                                                 "what did you do on the mission spy?":
-                                                    jump what_did_you_do_on_the_mission
+                                                    jump spy_what_did_you_do_on_the_mission
                                                 "the mission didn't go well did it?":
                                                     jump the_mission_didnt_go_well
                                 "what places?":
@@ -232,7 +234,7 @@ label spy_first_conversation:
                                             menu:
                                                 spy "i did, as tragic as it went"
                                                 "what did you do on the mission spy?":
-                                                    jump what_did_you_do_on_the_mission
+                                                    jump spy_what_did_you_do_on_the_mission
                                                 "the mission didn't go well did it?":
                                                     jump the_mission_didnt_go_well
                                         "i bet they're really good, you have an eye for gorgeous things":
@@ -240,7 +242,7 @@ label spy_first_conversation:
                                             menu:
                                                 spy "oh, did you need something, you did come in here for smth right?"
                                                 "what did you do on the mission spy?":
-                                                    jump what_did_you_do_on_the_mission
+                                                    jump spy_what_did_you_do_on_the_mission
                                                 "the mission didn't go well did it?":
                                                     jump the_mission_didnt_go_well
                 "you got a crush? writing in your diary to them?":
@@ -250,15 +252,15 @@ label spy_first_conversation:
                     menu:
                         spy "i mean it, but never mind, what did you come to me for?"
                         "what did you do on the mission spy?":
-                            jump what_did_you_do_on_the_mission
+                            jump spy_what_did_you_do_on_the_mission
                         "the mission didn't go well did it?":
                             jump the_mission_didnt_go_well
         "i wanted to ask how the mission went, i hear it was bad":
             spy "yeah it wasnt as smooth as it couldve been"
             mc "what did you do on the mission spy?"
-            jump what_did_you_do_on_the_mission
+            jump spy_what_did_you_do_on_the_mission
 
-label what_did_you_do_on_the_mission:
+label spy_what_did_you_do_on_the_mission:
     spy "i was the distraction, its kinda my thing ya know"
     spy "i was supposed to keep the target's lapdog out of their office"
     jump lapdog
@@ -303,6 +305,115 @@ label the_mission_didnt_go_well:
     spy "i had to deal with the target's lapdog and i get grouchy when i have to socialize with rats"
     jump lapdog
 # SPY INITIAL CONVERSATION END
+
+# WEAPON TECH INITIAL CONVERSATION START
+label weaptech_first_conversation:
+    "description of weapon room"
+    menu:
+        "there's a figure bent over a table in the middle of the room, it's the weap tech"
+        "approach the table":
+            "you notice they're working on an explosive, when you walk to the other side of the them, weap tech sees you"
+            menu:
+                weaptech "hey! what's up?"
+                "just wanted to talk, you busy?":
+                    weaptech "nope, what do you need?"
+                    mc "what did you do on the mission weap tech?"
+                    jump weaptech_what_did_you_do_on_the_mission
+                "uh, is that a bomb?":
+                    weaptech "yup! good thing you didnt scare me, one wrong move and this room is fire and rubble"
+                    "you eye the bomb carefully"
+                    mc "was that for a mission?"
+                    weaptech "oh no, not anything in particular, it just never hurts to have an explosive around!"
+                    mc "right well i just wanted to chat"
+                    weaptech "oh nice! what about?"
+                    mc "what did you do on the mission weaptech?"
+                    jump weaptech_what_did_you_do_on_the_mission
+        "hey what're you working on?":
+            "they jolt suddenly, startled"
+            weaptech "no no no!"
+            "they throw what ever was in their hands across the room and drag you out the door to the hallway"
+            mc "why are we out here?"
+            "they press you to the ground and curl up on top of you, not answering"
+            "after a minute, they get up and peek in the door"
+            menu:
+                weaptech "well i was working on an explosive, guess it wasnt a good one"
+                "that was a bomb?":
+                    weaptech "it was supposed to be, no idea why it didn't blow- not that im complaining\nwhat brings you to my shop?"
+                    mc "just wanted to talk, you busy?"
+                    weaptech "nope, what do you need?"
+                    mc "what did you do on the mission weaptech?"
+                    jump weaptech_what_did_you_do_on_the_mission
+                "was going into the hallway really supposed to save us from an explosion?":
+                    "they drag you into the room again and plop down in their seat"
+                    weaptech "i mean, its better than nothing right? what brought you to my shop though?"
+                    mc "just wanted to talk, you busy?"
+                    weaptech "nope, what do you need?"
+                    mc "what did you do on the mission weaptech?"
+                    jump weaptech_what_did_you_do_on_the_mission
+
+label weaptech_what_did_you_do_on_the_mission:
+    weaptech "i was meant to be newbie's backup, they're talented, but still fresh,im probably the most skilled in combat after sniper and newbie\ntogether we were meant to find the target's hacker's office, where the thumbdrive was supposed to be"
+    mc "was it not there?"
+    weaptech "no, it wasnt, we broke in not long after spy started speaking with the target's hacker"
+    mc "everything worked out though? besides the missing drive?"
+    menu:
+        weaptech "well, not quite, the daughter of the target actually spotted us, im not surprised we ran into someone, but im shocked it was her"
+        "why?":
+            weaptech "there werent any guards in the area, the most important corner of the building\nthe hacker's office, the target's office, and even an entire vault in that one hallway"
+            mc "how did you get away?"
+            weaptech "well, i made up some excuse and dragged newbie away, good timing too, leader told us to get out almost immediately after"
+            weaptech "i could have sworn i heard someone yelling at someone else as we ran, sounded angry, but i didnt care, i just wanted to get out in one piece"
+            "they stand and grab a pistol off the table, inspecting it carefully"
+            menu:
+                weaptech "you like em? this is my baby, ace!"
+                "your baby?":
+                    weaptech "yup! built him myself!"
+                    jump this_bad_boy_packs
+                "why is it called ace?":
+                    weaptech "ace is a he, not an it, be nice and i dont know, just felt right"
+                    weaptech "i love my baby more than anything! oh but dont tell sniper yeah? itll be our little secret"
+                    mc "i guess?"
+                    jump this_bad_boy_packs
+        "what did you do?":
+            menu: 
+                weaptech "well by the time i noticed, newbie had struck up conversation with the daughter, i swear, that girl spends so much time with spy, she's taking after the goober"
+
+label this_bad_boy_packs:
+    weaptech "this bad boy packs more punch than a whole cannon, i was gonna test him after i finished the bomb, but oh well, wanna come watch?"
+    mc "you know, i'm good"
+    weaptech "well, your loss, if you want you can hang around here more, but im gonna go now, see you!"
+    mc "see you"
+    jump initial_conversation_menu
+# WEAPON TECH INITIAL CONVERSATION END
+
+# SNIPER INITIAL CONVERSATION START
+label sniper_first_conversation:
+    menu:
+        "description of the snipers room"
+        "what're you doing?":
+            menu:
+                sniper "i'm cleaning my rifle"
+                "how often do you do that?":
+                    menu:
+                        sniper "before and after every mission, and at least once a day"
+                        "wow, that's a lot":
+                            sniper "its what is necessary for the safety of myself and the people around me...or at least the people who arent on the other side of the muzzle"
+                            "there's a pause..."
+                            sniper "why did you come to me"
+                            mc "i wanted to ask about the last mission"
+                            sniper "he looks at mc"
+                            jump sniper_what_did_you_do_on_the_mission
+                        "explains why you're so good at it":
+                            jump trishaPlaceholder
+                "you look scary like that":
+                    jump trishaPlaceholder
+        "hi sniper":
+            jump trishaPlaceholder
+
+label sniper_what_did_you_do_on_the_mission:
+
+# SNIPER INITIAL CONVERSATION END
+
 
 label placeholder:
     "has not been written"
