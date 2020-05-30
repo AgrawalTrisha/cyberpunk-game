@@ -1213,7 +1213,39 @@ label hacker_third_conversation:
 # HACKER THIRD CONVERSATION END
 
 # SPY THIRD CONVERSATION START
+label spy_third_conversation:
+    "You find Emson going through his outfits."
+    menu:
+        spy "Oh, hello there. I'm just organizing my clothes. Want to help?"
+        "Sure.":
+            "He smiled and hands you a disguise."
+            spy "Fold this and place this on the far table. Do the same with this entire pile."
+            "You begin to work, Emson humming quietly."
+            jump spy_why_do_you_hate_the_government
+        "I actually wanted to ask you something that was bothering me.":
+            "His face gets nervous, before he plasters on a smile. Ever the charmer."
+            spy "Yeah, of course. What's on your mind?"
+            jump spy_why_do_you_hate_the_government
 
+label spy_why_do_you_hate_the_government:
+    mc "Why do you hate the government?"
+    "He pauses and looks at you carefully. He lets out a heavy sigh and sits down on the fainting couch."
+    spy "You want to know that bad, huh? Well, I guess I'll tell you if you're that curious."
+    "He gathers himself for a second, then begins speaking."
+    spy "My mom used to work for the government. I'm talking high level access kind of work. She was at the top of the cybernetics division and knew everything about what they were doing. You wouldn't believe how much money is pooled into just that branch alone."
+    mc "What exactly is cybernetics?"
+    spy "It's basically putting a computer in a person, be it to make them smarter, stronger, or sneakier. Well, my mom thought it was all to improve people who were hurt, people who lost limbs or have any sort of disability."
+    spy "Turns out that wasn't what the government was doing the research for."
+    mc "They wanted to make soldiers."
+    spy "Exactly. I don't have to explain how bad that could be for us. When my mom found out, she tried to tell the people. She got into a car crash a week later."
+    mc "It wasn't actually a car crash, was it?"
+    spy "No, it wasn't. Because of them, I lost my best friend. I'm going to do everything in my power to tell the people what my mom couldn't. I won't rest until they know the truth."
+    mc "We're here to help you."
+    spy "Thank you. I know I can trust my family. I know I can trust you."
+    "He looks down at the garment he's folding."
+    spy "You can go if you want. It was nice to have some company, but I kinda want to cry."
+    mc "I'll leave you be."
+    jump third_conversation_menu
 # SPY THIRD CONVERSATION END
 
 
