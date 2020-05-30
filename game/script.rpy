@@ -1122,8 +1122,24 @@ label leader_second_conversation:
 
 # FIGHT START
 label fight_in_workshop:
-    jump trishaPlaceholder
+    "You hear yelling coming from the workshop."
+    "Walking in, you see Erix, Elio, Lilea, and Bronx standing around the main table."
+    weaptech "The fact of the matter is we don't have the drive! There's nothing we can do about it!"
+    hacker "We could go back for it! There's nothing stopping us from running the mission again, we could just-"
+    sniper "It's too risky. You know we never hit the same place twice."
+    leader "Elio is right. We can't risk being caught when we barely made it out the first time."
+    hacker "That's an exaggeration. We were fine—"
+    leader "No, Lilea! I won't risk this team for a drive I—"
+    "He stops suddenly."
+    "The other three think he stopped for some other reason, but you can tell it's because he almost said something he didn't mean to."
+    "Erix looks around and sees you in the doorway. She gives you a smile."
+    weaptech "Oh, hey. Sorry if we disturbed you. We were just talking."
+    "You get the feeling that was a dismissal."
+    "Lilea sighs and brushes past you, Bronx following a second after he collects himself."
+    "When you look at Erix, she's turned around and fiddling with a scrap of metal at another bench."
+    "Elio just stands there looking at the table."
 # FIGHT END
+
 
 label placeholder:
     "has not been written"
