@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 115: choice menuitem expects a non-empty block.
-    "Thats the problem here?":
-                              ^
-
-File "game/script.rpy", line 128: expected menuitem
-    show hacker neutral
-    ^
+File "game/script.rpy", line 66: expected 'image_name_component' not found.
+    hide
+        ^
 
 Ren'Py Version: Ren'Py 7.3.0.271
-Sat May 30 12:41:18 2020
+Sat May 30 15:17:18 2020

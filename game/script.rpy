@@ -3,13 +3,13 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define hacker = Character("Lilea")
+define hacker = Character("Lilea", color="#AAFF00")
 define mc = Character("You")
 define leader = Character("Bronx")
-define spy = Character("Emson")
+define spy = Character("Emson", color="#00D5FF")
 define weaptech = Character("Erix")
 define sniper = Character("Elio")
-define newbie = Character("Kona")
+define newbie = Character("Kona", color="#FF9C00")
 
 
 # The game starts here.
@@ -54,18 +54,24 @@ label start:
     leader "Anyone in the First. This squadron has the highest clearance of all the Rebellion, so the mole can do some real damage."
     "Meet the members."
     scene bg black
-    show hacker happy
-    "Lilea the Hacker" "Computer expert, inventor, caffiene addict"
-    show spy happy
-    "Emson the Spy" "Charmer, socialite, excellent conversationalist"
-    show weaptech happy
-    "Erix the Weapons Technician" "Inventor, mechanic, proud guardian of 40+ pistols"
+    show hacker neutral
+    hacker "The hacker. Computer expert, inventor, caffiene addict"
+    hide hacker neutral
+    show spy neutral
+    spy "The spy. Charmer, socialite, excellent conversationalist"
+    hide spy neutral
+    show weaptech neutral
+    weaptech "The weapons technician. Inventor, mechanic, proud guardian of 40+ pistols"
+    hide weaptech neutral
     show sniper neutral
-    "Elio the Sniper" "Trained marksmen, soldier, tall drink of water"
-    show newbie happy
-    "Kona the Newbie" "Jack of all trades, first line of defense, unofficial team toddler"
+    sniper "The sniper. Trained marksmen, soldier, tall drink of water"
+    hide sniper neutral
+    show newbie neutral
+    newbie "The newbie. Jack of all trades, first line of defense, unofficial team toddler"
+    hide newbie neutral
     show leader neutral
-    "Bronx the Leader" "Veteran, strategist, unofficial team dad"
+    leader "The leader. Veteran, strategist, unofficial team dad"
+    hide leader neutral
     jump initial_conversation_menu
 # BRONX EXPOSITION END
 
@@ -204,6 +210,7 @@ label maybe_i_should_go_talk_to_them:
     jump im_sure_newbie_has_their_own_side_to_the_story
 
 label im_sure_newbie_has_their_own_side_to_the_story:
+    show hacker neutral
     mc "I'm sure Kona has her own side to the story."
     hacker "Right. Well, now that I have my stress ball, I can get back to stressing! I've got some schematics to look at."
     hacker "Without that thumbdrive, we lost a lot of valuable information. Gotta be double on top of everything!"
@@ -549,6 +556,7 @@ label thats_really_weird:
 
 # NEWBIE INITIAL CONVERSATION START
 label newbie_first_conversation:
+    show newbie neutral
     "You enter a bedroom, plain and discreet. It looks like whoever lives here hasn't been here long enough to decorate."
     "The only signs of a person inhabiting the space is the bed and the walls. The sheets are slightly rumpled and the walls have things on one wall."
     "There's a poster of the president with a mustache scribbled on it with black marker, a target in the shape of a person, and a picture of the First Squadron on top of hill taken by Emson."
