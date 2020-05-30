@@ -729,91 +729,100 @@ label second_conversation_menu:
     $ numPeopleTalkedTo = 0
 
     menu:
-        "you get to speak with three people"
-        "hacker" if talkedToHacker2 == False and numPeopleTalkedTo < 3:
+        "You have time to talk to three people after the mission briefing."
+        "Lilea." if talkedToHacker2 == False and numPeopleTalkedTo < 3:
             $ talkedToHacker2 = True
             $ numPeopleTalkedTo += 1
             jump hacker_second_conversation
-        "spy" if talkedToSpy2 == False and numPeopleTalkedTo < 3:
+        "Emson." if talkedToSpy2 == False and numPeopleTalkedTo < 3:
             $ talkedToSpy2 = True
             $ numPeopleTalkedTo += 1
             jump spy_second_conversation
-        "weapon tech" if talkedToWeapTech2 == False and numPeopleTalkedTo < 3:
+        "Erix." if talkedToWeapTech2 == False and numPeopleTalkedTo < 3:
             $ talkedToWeapTech2 = True
             $ numPeopleTalkedTo += 1
             jump trishaPlaceholder
-        "sniper" if talkedToSniper2 == False and numPeopleTalkedTo < 3:
+        "Elio." if talkedToSniper2 == False and numPeopleTalkedTo < 3:
             $ talkedToSniper2 = True
             $ numPeopleTalkedTo += 1
             jump trishaPlaceholder
-        "newbie" if talkedToNewbie2 == False and numPeopleTalkedTo < 3:
+        "Kona." if talkedToNewbie2 == False and numPeopleTalkedTo < 3:
             $ talkedToNewbie2 = True
             $ numPeopleTalkedTo += 1
             jump trishaPlaceholder
-        "leader" if talkedToLeader2 == False and numPeopleTalkedTo < 3:
+        "Bronx." if talkedToLeader2 == False and numPeopleTalkedTo < 3:
             $ talkedToLeader2 = True
             $ numPeopleTalkedTo += 1
             jump trishaPlaceholder
-        "fight in workshop" if numPeopleTalkedTo == 3:
+        "What's that noise?" if numPeopleTalkedTo == 3:
             jump trishaPlaceholder
 
 # HACKER SECOND CONVERSATION START
 label hacker_second_conversation:
-    "you get to the hackers room and you can hear voices"
-    hacker "yeah i know, its not the best"
+    "You get to Lilea's room and you can hear Lilea's voice. You stand in the doorway. It sounds like she's on the phone."
+    hacker "Yeah, I know. It's not the best."
     "..."
-    hacker "i didnt know it would happen! i made it nearly foolproof-"
+    hacker "I didn't know it would happen! I made it nearly foolproof—"
     "..."
-    hacker "you cant blame this on me, i did everything i could to help"
+    hacker "You can't blame this on me. I did everything I could to help."
     "..."
-    hacker "yeah, yeah i-"
-    "she turns around and sees you there in the doorway, startled"
-    hacker "i-i gotta go mom, talk to you later"
-    "she hangs up and looks at you awkwardly"
-    "that was my mom, she was chewing me out because her recipe folder got deleted again, even though i helped her save it into like three different places"
-    mc "that's rough"
-    hacker "yeah haha"
+    hacker "Yeah, yeah. I—"
+    "She turns around and sees you there in the doorway, and she looks startled."
+    hacker "I—I gotta go, Mom. Talk to you later."
+    "She hangs up and looks at you awkwardly."
+    "That was my mom. She was chewing me out because her recipe folder got deleted again, even though I helped her save it into like three different places on her hard drive."
+    mc "That's rough."
+    hacker "Yeah, haha..."
     menu:
-        hacker "...that meeting went kind of weird huh? i hope we can find a way to recover from losing the thumbdrive"
-        "leader will think of something":
-            hacker "yeah, hes smart, but ive actually had an idea for a while"
-            hacker "ive been meaning to bring it up to him, but i havent had a chance to"
-            mc "what's your idea?"
-            hacker "tsk tsk! thats for me to know and everyone else to find out!"
+        hacker "That meeting went kind of weird, huh? I hope we can find a way to recover from losing the thumbdrive."
+        "Bronx will think of something.":
+            hacker "Yeah, he's smart. But, I've actually had an idea for a while."
+            hacker "I've been meaning to bring it up to him, but I haven't had a chance to."
+            mc "What's your idea?"
+            hacker "Tsk tsk! That's for me to know and everyone else to find out!"
             menu:
-                hacker "tsk tsk! thats for me to know and everyone else to find out!"
-                "you seem excited about the idea":
-                    hacker "yeah, usually i just provide the tech backup, so it feels nice to do something more!"
-                    mc "tech backup is super important still"
-                    hacker "yeah but still! anyway im gonna go take a nap"
+                hacker "Except for Bronx I guess, since I'll be telling him directly... but you get the point!"
+                "You seem excited about the idea.":
+                    hacker "Yeah. Usually I just provide the tech backup, so it feels nice to do something more!"
+                    mc "Tech backup is super important."
+                    hacker "Yeah, but still! Anyway, I'm gonna go take a nap."
                     jump i_saw_those_redbulls_under
-                "have you been having caffeine again?":
-                    hacker "maybe...only natural sources though, tea does wonders for the body\nshe doesnt sound convincing\nim gonna go take a nap now"
+                "Have you been having caffeine again?":
+                    hacker "Maybe..."
+                    hacker "Only natural sources though, tea does wonders for the body!"
+                    "She doesn't sound convincing."
+                    hacker "I'm gonna go take a nap now."
                     jump i_saw_those_redbulls_under
-        "what was even supposed to be on that drive?":
-            hacker "no one really knows, but anything would be helpful, we can find a way to use whatever we get from the govt against them\nthe target was the president's old college buddy and current secretary of defense, so he runs in powerful circles"
-            mc "how did we know the drive existed?"
+        "What was even supposed to be on that drive?":
+            hacker "No one really knows, but anything would be helpful. We can find a way to use whatever we get from the government against them."
+            hacker "Maddox was the president's old college buddy and is the current Secretary of Defense, so he runs in powerful circles."
+            mc "How did we know the drive existed?"
             menu:
-                hacker "oh uh, i found mentions of it in emails between him and the president"
-                "emails? i thought govt officials werent supposed to use them anymore, i thought it was all via direct holo link?":
-                    hacker "uh...yeah! i meant i found it mentioned by some people on a mission a couple months back"
-                    mc "what people?"
-                    hacker "i dont remember, it was so long ago\nanyway, i gotta take a nap, all this mission talk is tiring me out"
-                    mc "uh okay"
-                    "she disappears among the shelves and suddenly you hear a \"thump!\" and quiet snoring, it doesnt sound faked"
+                hacker "Oh uh, I found mentions of it in emails between him and the president."
+                "Emails?":
+                    mc "I thought government officials weren't supposed to use them anymore. I thought it was all via direct holo link?"
+                    hacker "Uh..."
+                    hacker "Yeah! I meant I found it mentioned by some people on a mission a couple months back."
+                    mc "What people?"
+                    hacker "I don't remember. It was so long ago."
+                    hacker "Anyway, I gotta take a nap. All this mission talk is tiring me out."
+                    mc "Uh, okay."
+                    "She disappears somewhere into the depths of her office. A moment later, you hear soft snoring."
                     jump second_conversation_menu
-                "that was a lucky find":
-                    hacker "sure was haha, well, i gotta take a nap, too much mission talk you know?"
-                    mc "uh okay"
-                    "she disappears among the shelves and suddenly you hear a \"thump!\" and quiet snoring, it doesnt sound faked"
+                "That was a lucky find.":
+                    hacker "Sure was."
+                    "She laughs."
+                    hacker "Well, I gotta take a nap. Too much mission talk, you know?"
+                    mc "Uh, okay."
+                    "She disappears somewhere into the depths of her office. A moment later, you hear soft snoring."
                     jump second_conversation_menu
 
 label i_saw_those_redbulls_under:
-    mc "how? i saw those redbulls under your desk"
-    hacker "oops, i thought i hid those better, i can feel the caffeine crash coming though, i probably have about twenty seconds before i pass out"
-    mc "uh, yeah go take a nap"
-    hacker "bye!"
-    "she disappears among the shelves and you can only hope she hit something soft before you hear heavy snoring"
+    mc "How? I saw those Redbulls under your desk."
+    hacker "Oops, I thought I hid those better. I can feel the caffeine crash coming though. I probably have about twenty seconds before I pass out."
+    mc "Uh, yeah. Go take a nap."
+    hacker "Bye!"
+    "She disappears somewhere into the depths of her office. A moment later, you hear soft snoring."
     jump second_conversation_menu
 # HACKER SECOND CONVERSATION END
 
