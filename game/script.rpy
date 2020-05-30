@@ -45,129 +45,156 @@ label start:
     leader "The opportunity to steal the drive arose when we got word he'd be hosting a gala. That drive was supposed to have vital information that could change everything for the Rebellion."
     leader "It was supposed to be in Oran Jege's office. Jege is Maddox's resident 'computer specialist', but that's just codeword for hacker."
     leader "When we infiltrated Maddox's gala, it wasn't there and we left empty-handed."
+    mc "What does this have to do with me?"
+    leader "I've suspected for a while, but I think there's a mole in the First Squadron."
+    "You look at him sharply."
+    mc "A mole?"
+    leader "Yes. I won't go into the whole history, but there's been too many coincidences. I'm sure of it and as this team's leader, I need to protect them."
+    leader "Even if it's from themselves."
+    mc "Who could it be?"
+    leader "Anyone in the First. This squadron has the highest clearance of all the Rebellion, so the mole can do some real damage."
+    "Meet the members."
+    "Lilea, Hacker" "Computer expert, inventor, caffiene addict"
+    "Emson, Spy" "Charmer, socialite, excellent conversationalist"
+    "Erix, Weapons Technician"
+    "Inventor, mechanic, proud guardian of 40+ pistols"
+    "Elio, Sniper"
+    "Trained marksmen, soldier, tall drink of water"
+    "Kona, Newbie"
+    "Jack of all trades, first line of defense, unofficial team toddler"
+    "Bronx, Leader"
+    "Veteran, strategist, unofficial team dad"
     jump initial_conversation_menu
 # BRONX EXPOSITION END
     return
 
 label initial_conversation_menu:
     menu:
-        "who do you want to talk to?"
-        "hacker" if talkedToHacker == False:
+        "Who do you want to talk to?"
+        "Lilea" if talkedToHacker == False:
             $ talkedToHacker = True
             jump hacker_first_conversation
-        "spy" if talkedToSpy == False:
+        "Emson" if talkedToSpy == False:
             $ talkedToSpy = True
             jump spy_first_conversation
-        "weapons tech" if talkedToWeapTech == False:
+        "Erix" if talkedToWeapTech == False:
             $ talkedToWeapTech = True
             jump weaptech_first_conversation
-        "sniper" if talkedToSniper == False:
+        "Elio" if talkedToSniper == False:
             $ talkedToSniper = True
             jump sniper_first_conversation
-        "newbie" if talkedToNewbie == False:
+        "Kona" if talkedToNewbie == False:
             $ talkedToNewbie = True
             jump newbie_first_conversation
-        "leader" if talkedToLeader == False:
+        "Bronx" if talkedToLeader == False:
             $ talkedToLeader = True
             jump leader_first_conversation
-        "mission briefing" if talkedToHacker and talkedToLeader and talkedToNewbie and talkedToSniper and talkedToSpy and talkedToWeapTech:
+        "Mission Briefing" if talkedToHacker and talkedToLeader and talkedToNewbie and talkedToSniper and talkedToSpy and talkedToWeapTech:
             jump mission_briefing
 
 # HACKER INITIAL CONVERSATION START
 label hacker_first_conversation:
     menu:
-        "description of the hacker's room"
-        "find hacker":
-            "you hear noises from behind a shelf"
-            "investigate"
+        "The room is dark, metal shelves creating a maze you can't imagine navigating. The bare walls make the clutter stand out more."
+        "Cardboard boxes and stray papers line the shelves. You can see wires sticking out of random stacks."
+        "A desk is on the far side of the room with a computer sitting idle."
+        "Find Lilea.":
+            "Listening closely, you can hear noises. It sounds like it's coming from inside the shelf maze."
+            "You walk into the maze, following the mysterious noises. The source seems to be coming from a shelf pressed against a wall."
             menu:
-                "in between wall and shelf you find hacker trapped"
-                "what are you doing?":
+                "You don't know how, but Lilea is trapped in between the shelf and wall."
+                "What are you doing?":
+                    "She startles, craning her neck to look at you."
                     menu:
-                        hacker "trying to find something i dropped, thought i could find it but its kinda dark back here"
-                        "thats the problem here?":
-                            "hacker looks confused"
+                        hacker "I'm trying to find something I dropped. Thought I could find it, but it's kinda dark back here."
+                        "Thats the problem here?":
+                            "Lilea looks at you, confused."
                             jump hacker_do_you_want_help
-                        "do you want help?":
+                        "Do you want help?":
                             jump hacker_do_you_want_help
-                "how did you get back there?":
+                "How did you get back there?":
                     jump how_did_you_get_back_there
-        "snoop around":
-            "the walls are bare, mostly taken up by shelving for various nondescript boxes, peeking in you see stacks of papers and metal scraps\nthere's a desk against the far wall\ndesk is messy, with lots of folders, wires, and drawings spread across it\nthere are at least three working monitors, with several smashed ones in the corner\nwhen you get close to the desk, the walls talk"
-            "Voice" "who's there?"
-            "you whip around"
+        "Snoop around.":
+            "When you get close to the desk, the walls talk."
+            "Voice" "Who's there?"
+            "You whip around."
             menu:
-                "its dark but you can see a figure behind a shelf"
-                "who are you?":
-                    "Voice" "you sound familiar, do i know you? i'm hacker"
-                    "oh there she is"
+                "You can see a figure behind a shelf."
+                "Who are you?":
+                    "Voice" "You sound familiar... do I know you? I'm Lilea!"
+                    "Oh, there she is."
+                    mc "It's me."
                     jump its_me
-                "its me":
+                "It's me.":
                     jump its_me
 
 label its_me:
-    hacker "oh mc! its good youre there, i may or may not be stuck"
-    "you notice now that the figure is contorted in between the shelf and a wall"
+    hacker "Oh mc! It's good you're there. I may or may not be stuck."
+    "You notice now that the figure is contorted in between the shelf and a wall."
     menu:
-        "its hacker!"
-        "how did you get back there?":
+        "Poor Lilea."
+        "How did you get back there?":
             jump how_did_you_get_back_there
-        "do you want help?":
+        "Do you want help?":
             jump hacker_do_you_want_help
 
 label how_did_you_get_back_there:
     jump placeholder
 
 label hacker_do_you_want_help:
-    mc "do you want help?"
-    hacker "sure i could use some light go get my flashlight under my desk"
-    "her desk is messy, with lots of folders, wires, and drawings spread across it\nthere are at least three working monitors, with several smashed ones in the corner\ntheflashlight is under the desk, along with a stray sock"
-    "you give it back to her"
-    hacker "nice could you shine the light over me"
-    "you shine the light over her"
-    hacker "thanks, found it"
-    mc "what did you lose anyway"
-    "she extracts herself from the shelf, knocking over several boxes\nin the process, even more wires and papers fall out of the boxes"
-    hacker "my stress ball, i chucked it at the wall last night, you know...after the mission"
-    mc "ah i see"
-    hacker "yeah it was kind of a mess"
-    mc "what were you doing on the mission hacker"
+    hacker "Sure! I could use some light. Go get my flashlight under my desk."
+    "Her desk is messy, with lots of folders, wires, and drawings spread across it."
+    "Belatedly, you notice there are at least three working monitors, with several smashed ones in the corner of the room."
+    "Instead of a rolling chair, a lawn chair with a cold cup of coffee in the cupholder."
+    "You see the flashlight under the desk, along with a stray sock."
+    hacker "Nice! Could you shine the light over me?"
+    "You click on the flashlight, illuminating Lilea."
+    hacker "Thanks, now I see it."
+    mc "What did you lose?"
+    "She extracts herself from the shelf, knocking over several boxes. In the process, even more wires and papers fall out of the boxes."
+    hacker "My stress ball! I chucked it at the wall last night, you know... after Backwater."
+    mc "Ah, I see."
+    hacker "Yeah, it was kind of a mess."
+    mc "What were you doing during Backwater, Lilea?"
+    hacker "My job was to be the eyes basically. Bronx and I were in a van offsite."
     menu:
-        hacker "my job was to be the eyes basically\nme and the leader were in a van offsite, he ws working on a drone i designed last month, and i was inside the target's security system"
-        "did you see anything important?":
-            mc "did you see anything important?"
-            hacker "like anything wrong? not really, though the plan did go sideways pretty quickly"
-            mc "how?"
-            hacker "well, everything was doing their jobs to the letter except newbie"
-            hacker "i was monitoring the team, and i saw her chatting up the target's daughter as if she didn't have somewhere to be"
-            hacker "she must have gotten spotted and was trying to get away, if only they were more careful"
-            mc "was newbie alone?"
-            hacker "no, they were apart of the inside team with weap tech and spy"
-            mc "maybe i should go talk to them"
+        hacker "He was working a drone I designed last month, and i was inside Maddox's security system."
+        "Did you see anything important?":
+            hacker "Like anything wrong? Not really, though the plan did go sideways pretty quickly."
+            mc "How?"
+            hacker "Well, everything was doing their jobs to the letter except Kona."
+            hacker "I was monitoring the team, and I saw her chatting up the target's daughter, Andrea, as if she didn't have somewhere to be."
+            hacker "She must have gotten spotted and was trying to get away, if only they were more careful."
+            mc "Was Kona alone?"
+            hacker "No, she was a part of the inside team with Erix and Emson."
+            mc "Maybe I should go talk to them."
             jump maybe_i_should_go_talk_to_them
-        "was everything going well?":
-            hacker "yeah it was..."
-            hacker "up until i lost my eyes that is"
-            hacker "the target must have realized i was in the system and booted me out, i think that was when things were over for us"
-            mc "how could they have known?"
-            hacker "i have no clue, i was so thorough. maybe the inside team got caught"
-            mc "who was the inside team?"
+        "Was everything going well?":
+            hacker "Yeah it was, up until I lost my eyes that is."
+            hacker "Jege must have realized I was in the system and booted me out. I think that was when things were over for us."
+            mc "How could they have known?"
+            hacker "I have no clue. I was so thorough. Maybe the inside team got caught."
+            mc "Who was the inside team?"
             menu:
-                hacker "that would be newbie, spy, and weap tech\nafter i lost my eyes i had no way of watching them, but there were a lot of lcose calls before that happened"
-                "what kind of close calls?":
-                    hacker "i know newbie got spotted at one point, she was supposed to be sneaking with weap tech, but for some reason she was talking with the target's daughter! no clue what she was thinking\nweap tech was supposed to be back up for newbie, to make sure the drive got picked up perfectly, but you can tell they didn't exactly do that\nit wasnt long afterward before leader called the mission off"
+                hacker "That would be Kona, Emson, and Erix. After I lost my eyes I had no way of watching them, but there were a lot of close calls before that happened."
+                "What kind of close calls?":
+                    hacker " know Kona got spotted at one point. She was supposed to be sneaking with Erix, but for some reason she was talking with Maddox's daughter, Andrea!"
+                    hacker "No clue what she was thinking."
+                    hacker "Erix was supposed to be back up for Kona, to make sure the drive got picked up perfectly. You can tell they didn't exactly pull that off."
+                    hacker "It wasn't long afterward before Bronx called the mission off."
                     jump im_sure_newbie_has_their_own_side_to_the_story
-                "maybe i should go talk to them":
+                "Maybe I should go talk to them.":
                     jump maybe_i_should_go_talk_to_them
 
 label maybe_i_should_go_talk_to_them:
-    hacker "oh, if youre going to yell at them, theres no point, it wont solve anything"
+    hacker "Oh, if you're going to yell at her, there's no point. It won't solve anything."
     jump im_sure_newbie_has_their_own_side_to_the_story
 
 label im_sure_newbie_has_their_own_side_to_the_story:
-    mc "i'm sure newbie has their own side to the story"
-    hacker "right, well, now that i have my stress ball i can get back to stressing!\ni've got some schematics to look at, without that thumbdrive, we lost a lot of valuable information, gotta be double on top of everything"
-    mc "well bye"
+    mc "I'm sure Kona has her own side to the story."
+    hacker "Right. Well, now that I have my stress ball, I can get back to stressing! I've got some schematics to look at."
+    hacker "Without that thumbdrive, we lost a lot of valuable information. Gotta be double on top of everything!"
+    mc "Well, bye."
     jump initial_conversation_menu
 # HACKER INITIAL CONVERSATION END
 
