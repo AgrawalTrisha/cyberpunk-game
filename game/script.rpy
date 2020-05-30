@@ -53,22 +53,22 @@ label start:
     mc "Who could it be?"
     leader "Anyone in the First. This squadron has the highest clearance of all the Rebellion, so the mole can do some real damage."
     "Meet the members."
-    scene bg black
+    scene bg hacker room
     show hacker neutral
-    hacker "The hacker. Computer expert, inventor, caffiene addict"
-    hide hacker neutral
+    hacker "The hacker. Computer expert, inventor, caffeine addict"
+    scene bg spy room
     show spy neutral
     spy "The spy. Charmer, socialite, excellent conversationalist"
-    hide spy neutral
+    scene bg placeholder
     show weaptech neutral
     weaptech "The weapons technician. Inventor, mechanic, proud guardian of 40+ pistols"
-    hide weaptech neutral
+    scene bg placeholder
     show sniper neutral
     sniper "The sniper. Trained marksmen, soldier, tall drink of water"
-    hide sniper neutral
+    scene bg placeholder
     show newbie neutral
     newbie "The newbie. Jack of all trades, first line of defense, unofficial team toddler"
-    hide newbie neutral
+    scene bg placeholder
     show leader neutral
     leader "The leader. Veteran, strategist, unofficial team dad"
     hide leader neutral
