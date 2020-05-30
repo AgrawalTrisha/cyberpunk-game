@@ -3,7 +3,6 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Eileen")
 define hacker = Character("Lilea")
 define mc = Character("You")
 define leader = Character("Bronx")
@@ -35,8 +34,7 @@ label start:
 # EXPOSITION END
 
 # BRONX EXPOSITION START
-    scene bg room
-
+    scene bg war room
     show leader neutral
 
     "Bronx shifts around in his seat."
@@ -49,20 +47,27 @@ label start:
     leader "I've suspected for a while, but I think there's a mole in the First Squadron."
     "You look at him sharply."
     mc "A mole?"
+    show leader serious
     leader "Yes. I won't go into the whole history, but there's been too many coincidences. I'm sure of it and as this team's leader, I need to protect them."
     leader "Even if it's from themselves."
     mc "Who could it be?"
     leader "Anyone in the First. This squadron has the highest clearance of all the Rebellion, so the mole can do some real damage."
     "Meet the members."
-    "Lilea - Hacker" "Computer expert, inventor, caffiene addict"
-    "Emson. Spy" "Charmer, socialite, excellent conversationalist"
-    "Erix, Weapons Technician" "Inventor, mechanic, proud guardian of 40+ pistols"
-    "Elio, Sniper" "Trained marksmen, soldier, tall drink of water"
-    "Kona, Newbie" "Jack of all trades, first line of defense, unofficial team toddler"
-    "Bronx, Leader" "Veteran, strategist, unofficial team dad"
+    scene bg black
+    show hacker happy
+    "Lilea the Hacker" "Computer expert, inventor, caffiene addict"
+    show spy happy
+    "Emson the Spy" "Charmer, socialite, excellent conversationalist"
+    show weaptech happy
+    "Erix the Weapons Technician" "Inventor, mechanic, proud guardian of 40+ pistols"
+    show sniper neutral
+    "Elio the Sniper" "Trained marksmen, soldier, tall drink of water"
+    show newbie happy
+    "Kona the Newbie" "Jack of all trades, first line of defense, unofficial team toddler"
+    show leader neutral
+    "Bronx the Leader" "Veteran, strategist, unofficial team dad"
     jump initial_conversation_menu
 # BRONX EXPOSITION END
-    return
 
 label initial_conversation_menu:
     menu:
@@ -135,13 +140,13 @@ label its_me:
             jump hacker_do_you_want_help
 
 label how_did_you_get_back_there:
-    jump placeholder
+    hacker "Uh, I'm not sure."
+    jump hacker_do_you_want_help
 
 label hacker_do_you_want_help:
-    hacker "Sure! I could use some light. Go get my flashlight under my desk."
+    hacker "I could use some light. Go get my flashlight under my desk."
     "Her desk is messy, with lots of folders, wires, and drawings spread across it."
     "Belatedly, you notice there are at least three working monitors, with several smashed ones in the corner of the room."
-    "Instead of a rolling chair, a lawn chair with a cold cup of coffee in the cupholder."
     "You see the flashlight under the desk, along with a stray sock."
     hacker "Nice! Could you shine the light over me?"
     "You click on the flashlight, illuminating Lilea."
@@ -1475,9 +1480,9 @@ label time_to_choose:
             "You look at everyones faces, trying to put the pieces together in your head, but a face is missing."
             jump whos_missing
 
-label whos_missing:"
-    Kona: "Hey, where'd Lilea go?
-    "Bronx and you make eye contact. His gaze is sharp. 'It's Lilea.'
+label whos_missing:
+    newbie "Hey, where'd Lilea go?"
+    "Bronx and you make eye contact. His gaze is sharp. 'It's Lilea.'"
     "Immediately, everyone in the room takes off down the hallway to search for the missing woman. Everyone branches in different directions. You run for her room."
     "She's not there, but one of her monitors is on. It shows a pop up: \"MESSAGE SENT\". You don't have to guess who the message was for."
     "You dart out of the room to find someone to warn, running for the war room. When you push the door open, you're greeted by the image of Erix and Emson knocked out on the ground, their hands are pulled behind their backs with rope."
@@ -1493,9 +1498,3 @@ label whos_missing:"
     "Maddox" "Anyway, I'm please to announce none of you will be seeing anything but four brick walls for a long, long time."
     return
 # TURN IN THE MOLE ENDING END
-
-label placeholder:
-    "has not been written"
-
-label trishaPlaceholder:
-    "code it trish!"
