@@ -1421,6 +1421,23 @@ label time_to_choose:
     menu:
         "Bronx is looking at you. It's time to choose."
         "It's Lilea.":
+            "Lilea freezes."
+            hacker "What... how? I—"
+            leader "Is it true, Lilea? Are you a spy for the government?"
+            "She stiffens, then suddenly bolts for the door."
+            "Elio is faster though. He grabs her by the sholders, pushing her down into a seat. He stands behind her silently."
+            spy "Are you serious? Are you actually a snitch?"
+            weaptech "Lea... why?"
+            hacker "It's not as simple as 'good' or 'bad'. Sometimes there's a gray area, you know."
+            newbie "What's worth it enough to make you switch sides completely?"
+            hacker "Family."
+            sniper "Are we not also your family?"
+            leader "It doesn't matter now. We have to go. Elio, Kona, restrain her. We're going to the safe house. There, Lilea will have no contact with technology of any kind."
+            leader "Get your go bags. You have five minutes."
+            "As they pass Lilea, the team lets their eyes linger on her."
+            "After getting your bag, you meet up with the team. Lilea's hands are pulled behind her with rope. Everyone avoids looking at her."
+            "In the next fifteen minutes, government officers flood the halls, clearing rooms and searching for your team, but you are long gone."
+            return
         "It's Emson.":
             "His jaw drops."
             spy "Me? You think I'm with those rats? How? Everything I do is for the rebellion!"
