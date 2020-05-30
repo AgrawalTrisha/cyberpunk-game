@@ -59,16 +59,21 @@ label start:
 label initial_conversation_menu:
         menu:
             "who do you want to talk to?"
-            "hacker":
+            "hacker" if talkedToHacker == False:
+                $ talkedToHacker = True
                 jump hacker_first_conversation
-            # "spy":
-            # "weapons tech":
-            # "sniper":
-            # "newbie":
-            # "leader":
+            "spy":
+                jump placeholder
+            "weapons tech":
+                jump placeholder
+            "sniper":
+                jump placeholder
+            "newbie":
+                jump placeholder
+            "leader":
+                jump placeholder
 
 label hacker_first_conversation:
-    $ talkedToHacker = True
     menu:
         "description of the hacker's room"
         "find hacker":

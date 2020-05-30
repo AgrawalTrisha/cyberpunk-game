@@ -2,30 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 17: invalid syntax
-    bool talkedToSpy = false
-                    ^
-    
-
-File "game/script.rpy", line 18: invalid syntax
-    bool talkedToWeapTech = false
-                         ^
-    
-
-File "game/script.rpy", line 19: invalid syntax
-    bool talkedToSniper = false
-                       ^
-    
-
-File "game/script.rpy", line 20: invalid syntax
-    bool talkedToNewbie = false
-                       ^
-    
-
-File "game/script.rpy", line 21: invalid syntax
-    bool talkedToLeader = false
-                       ^
-    
+File "game/script.rpy", line 62: expected menuitem
+    if !talkedToHacker:
+    ^
 
 Ren'Py Version: Ren'Py 7.3.0.271
-Fri May 29 20:29:40 2020
+Fri May 29 20:32:37 2020
