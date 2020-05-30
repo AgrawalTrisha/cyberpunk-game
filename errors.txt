@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 485: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
-    menu:
+File "game/script.rpy", line 525: expected statement.
+    "want to talk about it?":
+                            ^
+
+File "game/script.rpy", line 529: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    "they laugh but it sounds bitter"
     ^
 
 Ren'Py Version: Ren'Py 7.3.0.271
-Fri May 29 23:22:31 2020
+Sat May 30 00:07:42 2020

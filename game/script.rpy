@@ -10,6 +10,7 @@ define leader = Character("Bronx")
 define spy = Character("Emson")
 define weaptech = Character("Erix")
 define sniper = Character("Elio")
+define newbie = Character("Kona")
 
 
 # The game starts here.
@@ -74,8 +75,9 @@ label initial_conversation_menu:
             "sniper" if talkedToSniper == False:
                 $ talkedToSniper = True
                 jump sniper_first_conversation
-            "newbie":
-                jump trishaPlaceholder
+            "newbie" if talkedToNewbie == False:
+                $ talkedToNewbie = True
+                jump newbie_first_conversation
             "leader":
                 jump trishaPlaceholder
 
@@ -500,6 +502,84 @@ label thats_really_weird:
     mc "oh yeah bye"
     jump initial_conversation_menu
 # SNIPER INITIAL CONVERSATION END
+
+# NEWBIE INITIAL CONVERSATION START
+label newbie_first_conversation:
+    "description of the room"
+    menu:
+        newbie "hey whats up mc?"
+        "just wanted to see what you're up to":
+            menu:
+                newbie "oh, just thinking about the last mission, it didn't go how i expected"
+                "it didnt go how anyone expected":
+                    "they laugh but it sounds bitter"
+                    newbie "it really didnt. can i tell you something"
+                    mc "always"
+                    newbie "the mission failing kind of feels like my fault, like what happened during it was because of me and now we lost the thumbdrive"
+                    jump newbie_what_happened_on_the_mission
+                "want to talk about it?":
+                    newbie "yeah actually, i feel kinda bad about it, i think its my fault it failed so bad"
+                    jump newbie_what_happened_on_the_mission
+        "how you been?":
+            menu:
+                newbie "ive been better, the mission was kind of a mess and its been making me a mess too"
+                "want to talk about it?":
+                    newbie "yeah actually, i feel kinda bad about it, i think its my fault it failed so bad"
+                    jump newbie_what_happened_on_the_mission
+                "it didn't go how anyone expected":
+                    "they laugh but it sounds bitter"
+                    newbie "it really didnt. can i tell you something"
+                    mc "always"
+                    newbie "the mission failing kind of feels like my fault, like what happened during it was because of me and now we lost the thumbdrive"
+                    jump newbie_what_happened_on_the_mission
+
+label newbie_what_happened_on_the_mission:
+    newbie "well, me and weap tech were supposed to get into the target's hacker's office right? hacker was leading us there by looking through the security cameras"
+    newbie "we were supposed to be in and out as spy was distracting the govt hacker meaning the hallway was supposed to be empty, but someone was there"
+    mc "who was there?"
+    "they look uncomfortable"
+    menu:
+        newbie "it was the targets daughter, i knew we werent supposed to be seen, the only showing their face was supposed to be spy, but i didnt know what else to do, so i spoke to her"
+        "why did you speak to her":
+            newbie "i thought i could distract her? it didnt really work out that way, she distracted me more than anything, i had to be pulled away by weap tech"
+            jump did_you_get_anything_out_of_her
+        "was she on to you?":
+            newbie "no, it didn't seem like it"
+            jump did_you_get_anything_out_of_her
+
+label did_you_get_anything_out_of_her:
+    mc "did you get anything out of her?"
+    newbie "nothing other than she's annoyed with her dad right now, she doesnt seem like a fan of the guy"
+    menu:
+        newbie "i would have gotten more info i swear, but by that time weap tech yanked me down the hall and leader was giving the call to pull out"
+        "it doesnt sound like you ruined the mission":
+            newbie "oh, thank you, but im still not sure, ill never make the same mistake though, i wont let this team down"
+            jump youre_awfully_determined
+        "did you see anything else?":
+            newbie "the office seemed empty, but we couldnt go in because the daughter was there\nthere sounded like there were people arguing nearby too, i heard someone yelling as we were bolting"
+            mc "could you hear what about?"
+            newbie "no, but if i had to guess, someone was getting yelled at\nif only i had been paying better attention, then i wouldve gotten the drive, or at least better info"
+            jump youre_awfully_determined
+
+label youre_awfully_determined:
+    mc "you're awfully determined"
+    menu:
+        newbie "anything to take down the tyrants they call the government around here"
+        "it seems like you don't like the govt":
+            newbie "no, too many people have suffered because of them, if i can make this place just a little bit more just, ill have done my job"
+            mc "you're in the right place if that's your goal"
+            jump youre_in_the_right_place_if_thats
+        "you're in the right place if that's your goal":
+            jump youre_in_the_right_place_if_thats
+
+label youre_in_the_right_place_if_thats:
+    newbie "no place id rather be! id do anything for this team\nyou really cheered me up mc! thanks, im gonna go to the kitchen for a bite if you want to come"
+    mc "i'm alright, thanks though"
+    newbie "your loss then! see you later"
+    mc "see you later"
+    jump initial_conversation_menu
+
+# NEWBIE INITIAL CONVERSATION END
 
 
 label placeholder:
