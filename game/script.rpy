@@ -54,16 +54,12 @@ label start:
     mc "Who could it be?"
     leader "Anyone in the First. This squadron has the highest clearance of all the Rebellion, so the mole can do some real damage."
     "Meet the members."
-    "Lilea, Hacker" "Computer expert, inventor, caffiene addict"
-    "Emson, Spy" "Charmer, socialite, excellent conversationalist"
-    "Erix, Weapons Technician"
-    "Inventor, mechanic, proud guardian of 40+ pistols"
-    "Elio, Sniper"
-    "Trained marksmen, soldier, tall drink of water"
-    "Kona, Newbie"
-    "Jack of all trades, first line of defense, unofficial team toddler"
-    "Bronx, Leader"
-    "Veteran, strategist, unofficial team dad"
+    "Lilea - Hacker" "Computer expert, inventor, caffiene addict"
+    "Emson. Spy" "Charmer, socialite, excellent conversationalist"
+    "Erix, Weapons Technician" "Inventor, mechanic, proud guardian of 40+ pistols"
+    "Elio, Sniper" "Trained marksmen, soldier, tall drink of water"
+    "Kona, Newbie" "Jack of all trades, first line of defense, unofficial team toddler"
+    "Bronx, Leader" "Veteran, strategist, unofficial team dad"
     jump initial_conversation_menu
 # BRONX EXPOSITION END
     return
@@ -829,58 +825,82 @@ label i_saw_those_redbulls_under:
 # SPY SECOND CONVERSATION START
 label spy_second_conversation:
     menu:
-        "spys room is empty his journal is on his desk"
-        "go find spy":
-            "you walk out of the wardrobe wander around, hearing a groan and thump from the kitchen as you pass it"
-            "peeking in, you find spy surrounded by salines on the table"
-            mc "why are you surrounded by crushed saltines?"
-            spy "oh! mc! you scared me, i was building a house of cards, or- er, crackers i suppose"
+        "When you enter Emson's room, it's empty. His journal is on his desk."
+        "Go find Emson.":
+            "You walk out of his room and wander around, hearing a groan and thump from the war room as you pass it."
+            "Peeking in, you find Emson surrounded by saltines on the table."
+            mc "Why are you surrounded by crushed saltines?"
+            spy "Oh! You scared me. I was building a house of cards. Or—er, crackers, I suppose."
             menu:
-                spy "i was bored if you couldnt tell"
-                "could i ask you about your journal?":
-                    spy "sure what about it?"
-                    mc "whats in it?"
-                    spy "just doodles, some venting that i dont feel comfortable sharing with people, that sort of thing\nmy dad used to do the same thing so i think i got it from him"
+                spy "I was bored if you couldn't tell."
+                "Could I ask about your journal?":
+                    spy "Sure. What about it?"
+                    mc "What's in it?"
+                    spy "Just doodles. Some venting that I don't feel comfortable sharing with people. That sort of thing."
+                    spy "My dad used to do the same thing so I think I got it from him."
                     jump i_dont_know_much_about_families
-                "so whered you get your journal?":
-                    "he looks surprised but answers"
-                    spy "well you know it was my dads, he left it to me when i moved away"
+                "So, where'd you get your journal?":
+                    "He looks surprised, but answers anyway."
+                    spy "Well, you know it was my dad's. He left it to me when I moved away."
                     jump i_dont_know_much_about_families
-        "open his journal":
-            "creeping in, you reach his desk"
-            "you open the journal to the first page which has written property of emson s penned on it"
+        "Open his journal.":
+            "Creeping in, you reach his desk."
+            "You open the journal to the first page, which has \"Property of Emson S.\" penned on it."
             menu:
-                "it seems like most of the front pages is writing and the back pages are drawings"
-                "look at writings":
-                    "they seem to be daily entries, he wrote more on somedays and less on others\nthe biggest entries seem to be mission days"
-                    "today we broke into a govt lab. i didnt like it very much because we had to smash a bunch of samples, i think they were dna. im not sure, but i didnt like the mess. it cheered me up to remember this was govt property. i got glass in one of my shoes though."
-                    "today was SUPER FUN!! we saw HORSES!!! like actual, not lab produced, naturally born horses!! i didnt know they came in those colors naturally too. i asked leader if we could take one back to the base, but he said no."
-                    "yesterday sniper hit me during a mission. it hurt a lot, but i dont think he realized he used so much force, because when i fell, his eyes suddenly got wide and his mouth opened all big like a dumb old fish. though that might have been because a bomb went off."
-                    "it looks like the last entry was after the failed mission"
-                    "things didnt go well today. we didnt complete the objective, and now i think we're a little stuck. we all tried really hard, but im not sure where we'll go from here. im so sick of fighting all for us to have nowhere to go to lick our wounds. i can tell leader is stressed. he has to know that the govt is getting closer to us each day, but i wonder if hes just deluding himself."
-                    "you hear a voice behind you"
-                    spy "what are you doing!"
+                "It seems like most of the front pages is writing and the back pages are drawings."
+                "Look at writings.":
+                    "They seem to be daily entries. He wrote more on some days and less on others. The biggest entries seem to be mission days."
+                    "\"Today we broke into a government lab. I didn't like it very much because we had to smash a bunch of samples. I think they were DNA. I'm not sure, but I didn't like the mess."
+                    "It cheered me up to remember this was government property. I got glass in one of my shoes though.\""
+                    "\"Today was SUPER FUN!! We saw HORSES!!! Like actual, not lab-produced, naturally-born horses!! I didn't know they came in those colors naturally either. I asked Bronx if we could take one back to the base, but he said no.\""
+                    "\"Yesterday Elio hit me during a mission. It hurt a lot, but I don't think he realized he used so much force."
+                    "When I fell, his eyes suddenly got wide and his mouth opened all big like a dumb old fish. Though that might have been because a bomb went off.\""
+                    "It looks like the last entry was after Backwater."
+                    "\"Things didn't go well today. We didn't complete the objective, and now I think we're a little stuck. We all tried really hard, but I'm not sure where we'll go from here."
+                    "I'm so sick of fighting all for us to have nowhere to go to lick our wounds. I can tell Bronx is stressed. He has to know that the government is getting closer to us each day, but I wonder if he's just deluding himself.\""
+                    "You hear Emson's footsteps behind you."
+                    spy "What are you doing?"
                     jump spy_turn_around
-                "look at drawings":
-                    "the first couple are absent scribbles, you can imagine emson scrawling in the journal during meetings with bronx droning in the back"
-                    "others look like drawings of the others, side profiles that also were made during debriefs"
-                    "some look like they were drawn by others, a cartoon of hacker seems to be self portrait"
-                    "the more you go on, the better the drawings get, eventually they turn into sceneries of places you recognize from old missions as well as maps of places the team has infiltrated"
-                    "the latest mission's building is in here"
-                    "it looks like its a typical map of the three story building, just like what leader showed diagrams of in the war room"
-                    "whats different is a map of an unrecorded floor that seems to be the basement, theres enough detail for it to suggest someones been there before, but this is spy's journal? when had he been to the basement of the target's home?"
-                    jump trishaPlaceholder
+                "Look at drawings.":
+                    "The first couple are absent scribbles. You can imagine Emson scrawling in the journal during meetings with Bronx droning on in the background."
+                    "Others look like drawings of the team, side profiles that also were made during debriefings."
+                    "Some look like they were drawn by your teammates. A cartoon doodle of Lilea seems to be a self-portrait."
+                    "The more you go on, the better the drawings get."
+                    "Eventually they turn into sceneries of places you recognize from old missions as well as maps of places the team has infiltrated. The Backwater operation is in here."
+                    "It looks like its a typical map of the three story home, just like what leader showed diagrams of in the war room."
+                    "What's different is a map of an unrecorded floor that seems to be the basement. There's enough detail for it to suggest someone's been there before, but this is Emson's journal?"
+                    "...When had he been to the basement of the Maddox family home?"
+                    "The last drawing takes up two full pages. It looks like it was done by six different hands, each of the members."
+                    "They're self portraits. Some are better than others, but all of them are holding hands. You wonder how they got Elio to draw himself. It was probably Erix's doing."
+                    "There's an empty space on the far right with a sticky note pressed into the page.\">:D\""
+                    "You hear Emson's footsteps behind you."
+                    spy "What are you doing?"
+                    jump spy_turn_around
 
 label spy_turn_around:
-    jump trishaPlaceholder
+    menu:
+        spy "That's my journal."
+        "I was just waiting for you.":
+            spy "Waiting? That doesn't excuse going through my things."
+            spy "...Please. Just go."
+            "You don't meet his eyes."
+            spy "And don't tell anyone about whatever you saw."
+            jump second_conversation_menu
+        "I'm sorry for looking at your journal.":
+            spy "Yeah, well, that doesn't erase the fact that you did."
+            spy "...Please. Just go."
+            "You don't meet his eyes."
+            spy "And don't tell anyone about whatever you saw."
+            jump second_conversation_menu
 
 label i_dont_know_much_about_families:
-    mc "i dont know much about peoples families here"
-    "he shrugs"
-    spy "some people are more comfortable talking about their families than others. it doesnt hurt to ask though in my opinion"
-    mc "i suppose youre right"
-    spy "well, i gotta clean up these crackers, leader will have my head if i dont"
-    mc "bye bye"
+    mc "I don't know much about people's families here."
+    "He shrugs."
+    spy "Some people are more comfortable talking about their families than others. It doesn't hurt to ask, in my opinion."
+    mc "I suppose you're right."
+    spy "Well, I gotta clean up these crackers. Bronx will have my head if I don't."
+    spy "Bye!"
+    mc "Bye."
     jump second_conversation_menu
 # SPY SECOND CONVERSATION END
 
