@@ -7,7 +7,7 @@ define hacker = Character("Lilea", color="#AAFF00")
 define mc = Character("You")
 define leader = Character("Bronx")
 define spy = Character("Emson", color="#00D5FF")
-define weaptech = Character("Erix")
+define weaptech = Character("Erix", color="#A500FF")
 define sniper = Character("Elio")
 define newbie = Character("Kona", color="#FF9C00")
 
